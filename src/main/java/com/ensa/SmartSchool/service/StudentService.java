@@ -47,5 +47,12 @@ public class StudentService {
 
 		return studentDao.updatePassword(student, password);
 	}
+	public boolean delete(Student student) {
+		return studentDao.delete(student);
+	}
+	
+	public List<Student> read() {
+		return studentDao.read();
+	}
 
 }
