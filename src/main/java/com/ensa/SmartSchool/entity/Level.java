@@ -1,6 +1,6 @@
 package com.ensa.SmartSchool.entity;
 
-import java.util.Map;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,5 +14,6 @@ public class Level {
 
 	private String levelName;
 	private int levelId;
-	Map<Professor, Module> professorModules;
+	List<Professor> professors;
+	List<Module> modules;
 }
