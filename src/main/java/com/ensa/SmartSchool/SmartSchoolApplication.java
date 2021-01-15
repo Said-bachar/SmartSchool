@@ -12,12 +12,18 @@ import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.service.AdminService;
 import com.ensa.SmartSchool.service.LevelService;
 import com.ensa.SmartSchool.service.StudentService;
+import com.ensa.SmartSchool.view.FxmlView;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
 
 @SpringBootApplication
 public class SmartSchoolApplication {
-
+	
 	public static void main(String[] args) {
-		ConfigurableApplicationContext ac= SpringApplication.run(SmartSchoolApplication.class, args);
+		
+		Application.launch(SmartSchoolJavaFX.class, args);
+		//ConfigurableApplicationContext ac= SpringApplication.run(SmartSchoolApplication.class, args);
 		//StudentService sr = ac.getBean(StudentService.class);
 		//AdminService sr = ac.getBean(AdminService.class);
 		/*Admin admin = new Admin();
@@ -36,18 +42,21 @@ public class SmartSchoolApplication {
 		//sr.updateEmail(student,"mary@kjebfkjebgkl.6577");
 		//sr.create(student);
 		//System.out.println(sr.read());
-		LevelService lr =ac.getBean(LevelService.class);
+		//LevelService lr =ac.getBean(LevelService.class);
 		//Level level1=new Level();
 		//level1.setLevelName("gi3");
 		//Level level2=new Level();
 		//level2.setLevelName("gi4");
 		//lr.create(level1);
 		//lr.create(level2);
-		Level level3=lr.getLevel("gi3");
-		lr.updateLevelName(level3, "gil3");
+		//Level level3=lr.getLevel("gi3");
+		//lr.updateLevelName(level3, "gil3");
 		//Level level4=lr.getLevel("gil3");
 		//lr.delete(level4);
 		
 		
 	}
+	
+
+	
 }
