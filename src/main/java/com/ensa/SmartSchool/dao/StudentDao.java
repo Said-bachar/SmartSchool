@@ -70,5 +70,11 @@ JdbcTemplate jdbcTemplate;
 		List<Student> list =jdbcTemplate.query(sql,new StudentMapper());
 		return list;
 	}
+	
+	public Student findStudentByEmail(String email) {
+		String sql="SELECT * FROM STUDENT WHERE EMAIL=?";
+		
+		return jdbcTemplate.queryForObject(sql, new StudentMapper(),email);
+	}
 
 }

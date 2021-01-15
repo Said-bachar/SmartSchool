@@ -36,5 +36,14 @@ public Admin getAdmin(String username) {
 
 		return adminDao.updatePassword(admin, password);
 	}
-
+   
+    public boolean authenticate(String username, String password) {
+		
+		
+		Admin admin = adminDao.getAdmin(username);
+		if(admin.equals(null)) {
+			return false;
+		}
+		return admin.getPassword().equals(password) ;
+	}
 }

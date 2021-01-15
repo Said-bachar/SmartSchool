@@ -29,9 +29,8 @@ JdbcTemplate jdbcTemplate;
 	}
 	
 	public Admin getAdmin(String username) {
-		
-		return jdbcTemplate.queryForObject("select * from ADMIN where username = ?  ",new AdminMapper(),
-				username);
+		String sql = "SELECT * FROM ADMIN WHERE USERNAME=?";
+		return jdbcTemplate.queryForObject(sql, new AdminMapper(),username);
 		
 		
 	}

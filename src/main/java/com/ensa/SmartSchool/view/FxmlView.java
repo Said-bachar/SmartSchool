@@ -18,6 +18,7 @@ LOGINAS {
         }
     
     },
+
 LOGINADMIN {
 		
         @Override
@@ -27,10 +28,24 @@ LOGINADMIN {
 
         @Override
 		public String getFxmlFile() {
-            return "/fxml/Login2.fxml";
+            return "/fxml/LoginAdmin.fxml";
         }
     
-  };
+  },
+
+LOGINSTUDENT {
+		
+      @Override
+		public String getTitle() {
+          return getStringFromResourceBundle("LoginStudent.title");
+      }
+
+      @Override
+		public String getFxmlFile() {
+          return "/fxml/LoginStudent.fxml";
+      }
+  
+};
     
     public abstract String getTitle();
     public abstract String getFxmlFile();

@@ -20,9 +20,12 @@ public class LoginAsController {
     private StageManager stageManager;
 	
 	@FXML
-    void test(ActionEvent event) {
+    void loginAdmin(ActionEvent event) {
         this.stageManager.switchScene(FxmlView.LOGINADMIN);
     }
-
+	@FXML
+    void loginStudent(ActionEvent event) {
+        this.stageManager.switchScene(FxmlView.LOGINSTUDENT);
+    }
 
 }

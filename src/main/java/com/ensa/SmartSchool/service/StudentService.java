@@ -54,5 +54,15 @@ public class StudentService {
 	public List<Student> read() {
 		return studentDao.read();
 	}
+	
+        public boolean authenticate(String email, String password) {
+		
+		Student student = studentDao.findStudentByEmail(email);
+		
+		if(student.equals(null)) {
+			return false;
+		}
+		return student.getPassword().equals(password) ;
+	}
 
 }

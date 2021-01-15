@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="710.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.LoginAdminController">
+   <children>
+      <ImageView fitHeight="476.0" fitWidth="711.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../static/images/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="289.0" layoutX="289.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../static/images/ss.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="227.0" layoutY="109.0" prefHeight="333.0" prefWidth="309.0" style="-fx-background-color: rgba(0,21,79,0.4); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="82.0" layoutY="30.0" prefHeight="32.0" prefWidth="156.0" text="Login Here   " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Label>
+            <Label layoutX="75.0" layoutY="66.0" prefHeight="32.0" prefWidth="167.0" text="ADMIN LOGIN PANEL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Pane layoutX="37.0" layoutY="148.0" opacity="0.79" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="21.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/profile%20%5B%231336%5D.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children></Pane>
+            <Pane layoutX="37.0" layoutY="202.0" opacity="0.8" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/icons8_lock_52px.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+            <TextField fx:id="username" focusTraversable="false" layoutX="90.0" layoutY="151.0" prefHeight="32.0" prefWidth="186.0" promptText="Username" style="-fx-background-color: rgba(0,21 ,79 , 0.4); -fx-background-radius: 8 0 8 0;" styleClass="login-text" stylesheets="@../css/style.css">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect></TextField>
+            <PasswordField fx:id="password" focusTraversable="false" layoutX="90.0" layoutY="205.0" prefHeight="32.0" prefWidth="186.0" promptText="Password" style="-fx-background-color: rgba(0,21 ,79 , 0.4); -fx-background-radius: 8 0 8 0;" styleClass="login-text" stylesheets="@../css/style.css">
+               <font>
+                  <Font size="14.0" />
+               </font></PasswordField>
+            <Button fx:id="login_admin" layoutX="200.0" layoutY="278.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <Hyperlink focusTraversable="false" layoutX="91.0" layoutY="240.0" prefHeight="19.0" prefWidth="114.0" styleClass="hyperlien" stylesheets="@../css/style.css" text="Forgot password ?" textFill="WHITE" underline="true" />
+            <Line endX="100.0" layoutX="155.0" layoutY="117.0" startX="-100.0" stroke="#ff4007" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+            <Button layoutX="91.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Label layoutX="325.0" layoutY="459.0" prefHeight="17.0" prefWidth="114.0" text="© SmartSchool 2021" textFill="#ed500767" />
+      <Pane layoutX="651.0" layoutY="411.0" prefHeight="62.0" prefWidth="60.0" styleClass="panes" stylesheets="@../css/style.css">
+         <children>
+            <Circle fill="#ff4007" layoutX="31.0" layoutY="37.0" radius="19.0" stroke="#ff4007" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="21.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static/PNG@2_white_icons/icons8_shutdown_52px.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="4.0" layoutY="49.0" prefHeight="62.0" prefWidth="76.0" styleClass="panes" stylesheets="@../css/style.css">
+         <children>
+            <Circle fill="#ff4007" layoutX="27.0" layoutY="31.0" radius="19.0" stroke="#ff4007" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" />
+            <ImageView fitHeight="14.0" fitWidth="32.0" layoutX="13.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-rotate: -90;">
+               <image>
+                  <Image url="@../static/PNG@2_white_icons/arrow_up%20%5B%23337%5D.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
