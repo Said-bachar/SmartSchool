@@ -14,8 +14,12 @@ import javafx.scene.control.Button;
 @Component
 public class LoginAsController {
 	
+	@FXML
+    private Button btn_student;
+
     @FXML
     private Button btn_admin;
+    
     @Autowired @Lazy
     private StageManager stageManager;
 	

@@ -1,8 +1,7 @@
-.container {
-    -fx-background-size: contain;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-    -fx-background-size: 100% 100%;
+
+.root{
+	-fx-background-image:url('../static/images/bg.jpg');
+	-fx-background-size:100% 100%;
 }
 
 .paneContainer {
@@ -20,8 +19,8 @@
     -fx-background-color: rgba(135, 110, 245, 0.3);
 }
 
-.exit-btn {
-    -fx-effect: dropshadow(three-pass-box, rgba(220, 210, 210, 0.8), 10, 0, 0, 0);
+.exit-btn:hover {
+   -fx-scale-x: 1.1;
 }
 
 .panes:hover {

@@ -71,7 +71,7 @@ JdbcTemplate jdbcTemplate;
 		return list;
 	}
 	
-	public Student findStudentByEmail(String email) {
+	public Student getStudentByEmail(String email) {
 		String sql="SELECT * FROM STUDENT WHERE EMAIL=?";
 		
 		return jdbcTemplate.queryForObject(sql, new StudentMapper(),email);

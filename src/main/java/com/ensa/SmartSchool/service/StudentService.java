@@ -57,12 +57,16 @@ public class StudentService {
 	
         public boolean authenticate(String email, String password) {
 		
-		Student student = studentDao.findStudentByEmail(email);
+		Student student = studentDao.getStudentByEmail(email);
 		
 		if(student.equals(null)) {
 			return false;
 		}
 		return student.getPassword().equals(password) ;
 	}
+        
+        public Student getStudentByEmail(String email) {
+    		return studentDao.getStudentByEmail(email);
+    	}
 
 }

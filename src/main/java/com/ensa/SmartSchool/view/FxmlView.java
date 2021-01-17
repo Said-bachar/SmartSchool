@@ -45,6 +45,19 @@ LOGINSTUDENT {
           return "/fxml/LoginStudent.fxml";
       }
   
+},
+HOMESTUDENT {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("HomeStudent.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/HomeStudent.fxml";
+    }
+
 };
     
     public abstract String getTitle();

@@ -7,6 +7,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.view.FxmlView;
 import org.slf4j.Logger;
 
@@ -15,13 +16,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lombok.Data;
 
+@Data 
 public class StageManager {
 	
 	private static final Logger LOG = getLogger(StageManager.class);
     private final Stage primaryStage;
     private final SmartSchoolJavaFxLoader springFXMLLoader;
-
+    
+    private Student student;
     
     public StageManager(SmartSchoolJavaFxLoader springFXMLLoader, Stage stage) {
         this.springFXMLLoader = springFXMLLoader;
@@ -37,9 +41,11 @@ public class StageManager {
         //scene.getStylesheets().add("/styles/Styles.css");
         
        // primaryStage.initStyle(StageStyle.TRANSPARENT); //Not oblg
-        primaryStage.setResizable(false); // desactivate resize of stages
+       // primaryStage.setResizable(false); // desactivate resize of stages
         primaryStage.setTitle(title);
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(800.0);
+        primaryStage.setMinHeight(700.0);
         primaryStage.sizeToScene();
         primaryStage.centerOnScreen();
         
