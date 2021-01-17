@@ -101,8 +101,8 @@
             </ImageView>
          </children>
       </HBox>
-      <Button layoutX="615.0" layoutY="397.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="exit-btn" stylesheets="@../css/style.css" textFill="#ff4007" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="13.0" />
-      <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="616.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="21.0">
+      <Button layoutX="615.0" layoutY="397.0" onAction="#close" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="exit-btn" stylesheets="@../css/style.css" textFill="#ff4007" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="13.0" />
+      <ImageView fitHeight="26.0" onMouseClicked="#close1" fitWidth="23.0" layoutX="616.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="21.0">
          <image>
             <Image url="@../static/PNG@2_white_icons/icons8_shutdown_52px.png" />
          </image>

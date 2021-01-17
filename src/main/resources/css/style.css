@@ -42,3 +42,8 @@
 .loginAs:hover {
     -fx-translate-x: -195px;
 }
+
+.linear-grad
+{
+    -fx-background-color: linear-gradient(to bottom left,  #00154f, #ff4007);
+}

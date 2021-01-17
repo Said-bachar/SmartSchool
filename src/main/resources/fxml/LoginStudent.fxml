@@ -117,7 +117,7 @@
             </ImageView>
          </children>
       </HBox>
-      <Button layoutX="7.0" layoutY="91.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="exit-btn" stylesheets="@../css/style.css" textFill="#ff4007">
+      <Button layoutX="7.0" layoutY="91.0" mnemonicParsing="false" onAction="#goBack1" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="exit-btn" stylesheets="@../css/style.css" textFill="#ff4007">
          <graphic>
             <ImageView fx:id="back" fitHeight="14.0" fitWidth="32.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-rotate: -90;">
                <image>
@@ -126,7 +126,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="1295.0" layoutY="650.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="exit-btn" stylesheets="@../css/style.css" textFill="#ff4007" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="17.0">
+      <Button layoutX="1295.0" layoutY="650.0" mnemonicParsing="false" onAction="#close1" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #ff4007; -fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="exit-btn" stylesheets="@../css/style.css" textFill="#ff4007" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="17.0">
          <graphic>
             <ImageView fx:id="close" fitHeight="21.0" fitWidth="21.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
                <image>

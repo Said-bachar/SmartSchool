@@ -14,6 +14,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 
 @Component
 public class HomeStudentController implements Initializable{
@@ -22,16 +24,24 @@ public class HomeStudentController implements Initializable{
     private StageManager stageManager;
     @FXML
     private Label studentLogin;
+
+    @FXML
+    private Pane loginPane;
     
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		studentLogin.setText(stageManager.getStudent().getFirstName());
+		studentLogin.setText(stageManager.getStudent().getFirstName() + " " + stageManager.getStudent().getLastName());
+		loginPane.setStyle("-fx-background-color: #00ff00; -fx-background-radius: 50%");
 	}
     
 	 @FXML
 	    void logout(ActionEvent event) {
            this.stageManager.switchScene(FxmlView.LOGINSTUDENT);
 	    }
+	 @FXML
+	    void logout1(MouseEvent event){
+		 this.stageManager.switchScene(FxmlView.LOGINSTUDENT);
+	 }
     
 
 }

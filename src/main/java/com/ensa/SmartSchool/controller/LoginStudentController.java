@@ -9,6 +9,7 @@ import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.service.StudentService;
 import com.ensa.SmartSchool.view.FxmlView;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -39,11 +40,21 @@ public class LoginStudentController {
     private ImageView close;
     @FXML
     void close(MouseEvent event) {
-
+         Platform.exit();
+    }
+    
+    @FXML
+    void close1(ActionEvent event) {
+    	 Platform.exit();
     }
 
     @FXML
     void goBack(MouseEvent event) {
+    	this.stageManager.switchScene(FxmlView.LOGINAS);
+    }
+    
+    @FXML
+    void goBack1(ActionEvent event) {
     	this.stageManager.switchScene(FxmlView.LOGINAS);
     }
 		

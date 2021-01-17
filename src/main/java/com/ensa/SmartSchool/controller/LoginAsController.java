@@ -7,9 +7,11 @@ import org.springframework.stereotype.Component;
 import com.ensa.SmartSchool.config.StageManager;
 import com.ensa.SmartSchool.view.FxmlView;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
 @Component
 public class LoginAsController {
@@ -31,5 +33,15 @@ public class LoginAsController {
     void loginStudent(ActionEvent event) {
         this.stageManager.switchScene(FxmlView.LOGINSTUDENT);
     }
+	@FXML
+	void close(ActionEvent event) {
+		Platform.exit();
+	} 
+	
+	@FXML
+	void close1(MouseEvent event) {
+		Platform.exit();
+	} 
+
 
 }
