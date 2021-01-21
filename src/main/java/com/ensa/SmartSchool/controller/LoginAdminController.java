@@ -43,11 +43,12 @@ public class LoginAdminController {
     	
     	if(this.adminService.authenticate(this.username.getText(), this.password.getText())) {
     	System.out.println("ADMIN AUTHENTICATED");
-    	Alert alert = new Alert(AlertType.INFORMATION);
+    	/*Alert alert = new Alert(AlertType.INFORMATION);
 	      alert.setTitle("Information Dialog");
 	      alert.setHeaderText(null);
 	      alert.setContentText("Login with sucess!");
-	      alert.showAndWait();
+	      alert.showAndWait();*/
+    	this.stageManager.switchScene(FxmlView.HOMEADMIN);
     	
     	} else {
     		System.out.println("FALSE INFOS");
@@ -65,8 +66,19 @@ public class LoginAdminController {
 	    }
 	    
 	    @FXML
-	    void close(MouseEvent event) {
+	    void close1(MouseEvent event) {
 	    	Platform.exit();
+	    }
+	    
+	    @FXML
+	    void close(ActionEvent event) {
+	    	Platform.exit();
+	    }
+	    
+	    @FXML
+	    void cancel(ActionEvent event) {
+	         username.setText("");
+	         password.setText("");
 	    }
 	 
 	  

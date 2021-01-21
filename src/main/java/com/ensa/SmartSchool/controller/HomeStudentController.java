@@ -28,6 +28,9 @@ public class HomeStudentController implements Initializable{
     @FXML
     private Pane loginPane;
     
+    @FXML
+    private Pane home;
+    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		studentLogin.setText(stageManager.getStudent().getFirstName() + " " + stageManager.getStudent().getLastName());
@@ -42,6 +45,15 @@ public class HomeStudentController implements Initializable{
 	    void logout1(MouseEvent event){
 		 this.stageManager.switchScene(FxmlView.LOGINSTUDENT);
 	 }
-    
+	 
+	    @FXML
+	    void goHome(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.LOGINAS);
+	    }
+
+	    @FXML
+	    void goNotices(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.NOTICESTUDENT);
+	    }
 
 }

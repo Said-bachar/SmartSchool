@@ -1,15 +1,17 @@
 package com.ensa.SmartSchool.entity;
 
-import java.util.Date;
+import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
 @Data
+@Component
+
 public class Notice {
 	
 	private int noticeId;
 	private String title;
-	private Date date;
+	private String publicationDate;
 	private String message;
-
+	
 }

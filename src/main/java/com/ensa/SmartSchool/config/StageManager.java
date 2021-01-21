@@ -4,8 +4,7 @@ import java.util.Objects;
 
 
 import static org.slf4j.LoggerFactory.getLogger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
 
 import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.view.FxmlView;
@@ -15,7 +14,6 @@ import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import lombok.Data;
 
 @Data 

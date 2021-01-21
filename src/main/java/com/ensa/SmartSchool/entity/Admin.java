@@ -1,15 +1,9 @@
 package com.ensa.SmartSchool.entity;
 
+import lombok.Data;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Admin {
 
 	private String username;

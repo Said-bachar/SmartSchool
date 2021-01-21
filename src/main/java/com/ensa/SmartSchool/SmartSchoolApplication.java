@@ -8,9 +8,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.ensa.SmartSchool.entity.Admin;
 import com.ensa.SmartSchool.entity.Level;
+import com.ensa.SmartSchool.entity.Notice;
 import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.service.AdminService;
 import com.ensa.SmartSchool.service.LevelService;
+import com.ensa.SmartSchool.service.NoticeService;
 import com.ensa.SmartSchool.service.StudentService;
 import com.ensa.SmartSchool.view.FxmlView;
 
@@ -53,6 +55,9 @@ public class SmartSchoolApplication {
 		//lr.updateLevelName(level3, "gil3");
 		//Level level4=lr.getLevel("gil3");
 		//lr.delete(level4);
+		//NoticeService sr = ac.getBean(NoticeService.class);
+		//Notice notice = sr.getNoticeByTitle("Résultats");
+	      //    sr.updateMessage(notice, "Yes !! is updated.");
 		
 		
 	}

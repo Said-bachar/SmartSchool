@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -18,7 +28,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="700.0" prefHeight="700.0" prefWidth="1350.0" style="-fx-background-color: #ccc;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.LoginStudentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="700.0" prefHeight="700.0" prefWidth="1350.0" style="-fx-background-color: #ccc;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.LoginStudentController">
    <children>
       <HBox alignment="CENTER" layoutX="7.0" layoutY="110.0" prefHeight="471.0" prefWidth="1342.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="1.0">
          <children>
@@ -81,7 +91,7 @@
                         </ColorInput>
                      </effect>
                   </Button>
-                  <Button layoutX="222.0" layoutY="349.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" style="-fx-background-color: #ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="Cancel" textFill="WHITE">
+                  <Button layoutX="222.0" layoutY="349.0" mnemonicParsing="false" onAction="#cancel" prefHeight="32.0" prefWidth="96.0" style="-fx-background-color: #ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0) dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="Cancel" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="13.0" />
                      </font>

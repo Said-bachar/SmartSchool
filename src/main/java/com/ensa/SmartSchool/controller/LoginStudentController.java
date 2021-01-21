@@ -57,7 +57,13 @@ public class LoginStudentController {
     void goBack1(ActionEvent event) {
     	this.stageManager.switchScene(FxmlView.LOGINAS);
     }
-		
+	
+    @FXML
+    void cancel(ActionEvent event) {
+         email.setText("");
+         password.setText("");
+    }
+    
 	@FXML
 	 void Login(ActionEvent event) {
 		
