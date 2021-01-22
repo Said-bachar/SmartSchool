@@ -30,7 +30,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 
 
@@ -77,10 +81,20 @@ public class MainNoticeAdminController implements Initializable {
 	}
 
     @FXML
-    void goNotice(ActionEvent event) {
+    void goNoticeAdmin(ActionEvent event) {
     	this.stageManager.switchScene(FxmlView.NOTICEADMIN);
     }
-
+    
+    @FXML
+    void goMainNotice(MouseEvent event) {
+         this.stageManager.switchScene(FxmlView.MAINNOTICEADMIN);
+    }
+  
+    @FXML
+    void goHomeAdmin(MouseEvent event) {
+        this.stageManager.switchScene(FxmlView.HOMEADMIN);
+    }
+    
     @FXML
     void logout(ActionEvent event) {
        this.stageManager.switchScene(FxmlView.LOGINADMIN);
@@ -111,19 +125,28 @@ public class MainNoticeAdminController implements Initializable {
         pane.setVgap(5.5);
 
         // Place nodes in the pane
-        Label l1 = new Label("Modification de l'avis");
-        l1.setStyle("-fx-font-family: Arial; -fx-text-alignment : center; -fx-font-size : 30px; -fx-font-weight: 500; -fx-text-fill: #ff4007" );
-        pane.add(l1, 0, 0);
-        pane.add(new Label("Date de publication: "), 0, 1);
+        Label l1 = new Label("Notice Modifications");
+        l1.setStyle("-fx-font-family: Arial; -fx-effect: dropshadow(three-pass-box, #ff4007, 10, 0, 0, 0); -fx-padding: 5px; -fx-text-alignment : center; -fx-font-size : 17px; -fx-font-weight: 500; -fx-text-fill: #00154f; -fx-background-color: #fff; -fx-background-radius: 8px");
+        pane.add(l1, 1, 0);
+        Label l2 = new Label("Date of publication: ");
+        l2.setStyle("-fx-text-fill: #ff4007; -fx-font-size : 15px; -fx-font-weight: 500;");
+        pane.add(l2, 0, 1);
         TextField updatedDate = new TextField(selectedNotice.getPublicationDate());
+        updatedDate.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
         pane.add(updatedDate, 1, 1);
-        pane.add(new Label("Titre: "), 0, 2); 
+        Label l3 = new Label("Title: ");
+        l3.setStyle("-fx-text-fill: #ff4007; -fx-font-size : 15px; -fx-font-weight: 500;");
+        pane.add(l3, 0, 2); 
         TextField updatedTitle = new TextField(selectedNotice.getTitle());
+        updatedTitle.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
         pane.add(updatedTitle, 1, 2);
-        pane.add(new Label("Message: "), 0, 3);
+        Label l4 = new Label("Message: ");
+        l4.setStyle("-fx-text-fill: #ff4007; -fx-font-size : 15px; -fx-font-weight: 500;");
+        pane.add(l4, 0, 3);
         TextArea updatedMessage = new TextArea(selectedNotice.getMessage());
+        updatedMessage.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);");
         pane.add(updatedMessage, 1, 3);
-        Button saveBtn = new Button("Enregistrer");
+        Button saveBtn = new Button("Save");
         pane.add(saveBtn, 1, 4);
         saveBtn.setStyle("-fx-background-color: #00154f; -fx-text-fill: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0)");
         GridPane.setHalignment(saveBtn, HPos.RIGHT);
@@ -132,7 +155,7 @@ public class MainNoticeAdminController implements Initializable {
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane);
         Stage primaryStage = new Stage();
-        primaryStage.setTitle("Modifier L'avis"); 
+        primaryStage.setTitle("Modification of Notice");
         primaryStage.setScene(scene); 
         primaryStage.show(); // Display the stage
         
@@ -159,7 +182,17 @@ public class MainNoticeAdminController implements Initializable {
  
     @FXML
     void delete(ActionEvent event) {
-    		
+    
+    	Alert alt = new Alert(AlertType.CONFIRMATION);
+    	alt.setTitle("Delete Notice");
+    	alt.setHeaderText("Are you sure, you want to delete this notice ?");
+    	ButtonType yesBtn = new ButtonType("Yes", ButtonData.YES);
+    	ButtonType noBtn = new ButtonType("No", ButtonData.NO);
+    	alt.getButtonTypes().setAll(yesBtn, noBtn);
+    	Optional<ButtonType> res = alt.showAndWait();
+    	
+    	if(res.get() == yesBtn) {
+    	
     	Notice selectedNotice = notice_admin_table.getSelectionModel().getSelectedItem();
     	noticeService.delete(selectedNotice);
     	notice_admin_table.getItems().remove(selectedNotice);
@@ -168,7 +201,11 @@ public class MainNoticeAdminController implements Initializable {
    		publication_date_col.setCellValueFactory(new PropertyValueFactory<Notice, String>("publicationDate"));
    		details_col.setCellValueFactory(new PropertyValueFactory<Notice, String>("message"));
 
-    }
+        }
+    	else if(res.get() == noBtn){
+    		stageManager.switchScene(FxmlView.MAINNOTICEADMIN);
+    	}
+   }
     
     
     

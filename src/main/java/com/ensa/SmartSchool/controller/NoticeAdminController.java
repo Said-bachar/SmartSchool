@@ -62,6 +62,16 @@ public class NoticeAdminController {
     void logout1(MouseEvent event){
 	 this.stageManager.switchScene(FxmlView.LOGINADMIN);
  }
+    
+    @FXML
+    void goHomeAdmin(MouseEvent event) {
+    	this.stageManager.switchScene(FxmlView.HOMEADMIN);
+    }
+
+    @FXML
+    void goMainNoticeAdmin(MouseEvent event) {
+    	 this.stageManager.switchScene(FxmlView.MAINNOTICEADMIN);
+    }
 
    
 

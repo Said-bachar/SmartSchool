@@ -21,7 +21,7 @@
                   <Font name="Arial" size="22.0" />
                </font>
             </Label>
-            <Pane fx:id="loginPane" layoutX="213.0" layoutY="19.0" prefHeight="18.0" prefWidth="18.0" />
+            <Pane fx:id="loginPane" layoutX="171.0" layoutY="19.0" prefHeight="18.0" prefWidth="18.0" />
          </children>
       </Pane>
       <VBox alignment="CENTER" layoutX="69.0" layoutY="49.0" prefHeight="347.0" prefWidth="562.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="1.0">
@@ -32,7 +32,7 @@
                      <children>
                         <Pane layoutX="-1.0" layoutY="-3.0" onMouseClicked="#goHome" prefHeight="96.0" prefWidth="40.0" style="-fx-background-color: #b72801;">
                            <children>
-                              <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="7.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="7.0" layoutY="32.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
                                  <effect>
                                     <DropShadow />
                                  </effect>
@@ -74,7 +74,7 @@
                      <children>
                         <Pane layoutX="-1.0" layoutY="-4.0" prefHeight="98.0" prefWidth="40.0" style="-fx-background-color: b72801;">
                            <children>
-                              <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="8.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="8.0" layoutY="37.0" onMouseClicked="#goNotices" pickOnBounds="true" preserveRatio="true">
                                  <effect>
                                     <DropShadow />
                                  </effect>
@@ -84,14 +84,14 @@
                               </ImageView>
                            </children>
                         </Pane>
-                        <Text fill="WHITE" layoutX="61.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avis">
+                        <Text fill="WHITE" layoutX="61.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notices">
                            <font>
                               <Font name="Arial" size="22.0" />
                            </font>
                         </Text>
                      </children>
                   </Pane>
-                  <Pane layoutX="207.0" layoutY="176.0" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
+                  <Pane layoutX="206.0" layoutY="171.0" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
                      <children>
                         <Pane layoutX="-2.0" layoutY="-5.0" prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: #b72801;">
                            <children>
@@ -164,19 +164,19 @@
                <children>
                   <Pane prefHeight="40.0" prefWidth="49.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(220,225,225,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
                      <children>
-                        <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="34.0" fitWidth="64.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                            <effect>
                               <DropShadow />
                            </effect>
                            <image>
-                              <Image url="@../static/PNG@2_white_icons/close%20%5B%231511%5D.png" />
+                              <Image url="@../static/PNG@2_white_icons/icons8_s_128px.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="64.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="64.0" onMouseClicked="#goHome" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
-                        <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
                            <effect>
                               <DropShadow />
                            </effect>
@@ -186,9 +186,9 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="101.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="101.0" onMouseClicked="#goNotices" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" onMouseClicked="#goNotices" pickOnBounds="true" preserveRatio="true">
                            <effect>
                               <DropShadow />
                            </effect>

@@ -17,26 +17,26 @@
       <TableView fx:id="notice_student_tab" layoutX="69.0" layoutY="85.0" prefHeight="215.0" prefWidth="535.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
         <columns>
           <TableColumn fx:id="title_student" prefWidth="377.59998321533203" text="Title" />
-          <TableColumn fx:id="pub_date" minWidth="0.0" prefWidth="156.79995727539062" text="Publié le:" />
+          <TableColumn fx:id="pub_date" minWidth="0.0" prefWidth="156.79995727539062" text="Published on" />
         </columns>
       </TableView>
       <Pane prefHeight="407.0" prefWidth="49.0" style="-fx-background-color: #00154f;">
          <children>
             <Pane prefHeight="40.0" prefWidth="49.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(220,225,225,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="34.0" fitWidth="64.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
                      <image>
-                        <Image url="@../static/PNG@2_white_icons/close%20%5B%231511%5D.png" />
+                        <Image url="@../static/PNG@2_white_icons/icons8_s_128px.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="64.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="64.0" onMouseClicked="#goHomeStudent" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHomeStudent" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -127,7 +127,7 @@
       <Pane layoutX="595.0" layoutY="12.0" prefHeight="60.0" prefWidth="40.0" style="-fx-background-color: b72801; -fx-background-radius: 10 0 0 10;" />
       <Pane layoutX="525.0" layoutY="21.0" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 5 0 0 5;" styleClass="panes" stylesheets="@../css/style.css">
          <children>
-            <Text fill="WHITE" layoutX="32.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avis">
+            <Text fill="WHITE" layoutX="18.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notices">
                <font>
                   <Font name="Arial" size="22.0" />
                </font>
@@ -135,7 +135,7 @@
          </children>
       </Pane>
       <Line endX="100.0" layoutX="424.0" layoutY="41.0" startX="-374.3999938964844" startY="7.62939453125E-6" stroke="#ff4007" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
-      <Button contentDisplay="RIGHT" layoutX="488.0" layoutY="343.0" mnemonicParsing="false" onAction="#showMore" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #00154f; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 8;" text="Voir plus" textFill="WHITE">
+      <Button contentDisplay="RIGHT" layoutX="488.0" layoutY="343.0" mnemonicParsing="false" onAction="#showMore" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #00154f; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-radius: 8;" text="See more" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -146,11 +146,11 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Text fill="#ff370a" layoutX="391.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Séléctionez une annonce pour voir plus" wrappingWidth="243.93679809570312">
+      <Text fill="#ff370a" layoutX="432.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Select a notice to show details" wrappingWidth="171.93679809570312">
          <font>
             <Font name="Arial" size="12.0" />
          </font></Text>
-      <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="376.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="13.0" layoutX="420.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../static/PNG@2_white_icons/icons8_attention_64px.png" />
          </image>

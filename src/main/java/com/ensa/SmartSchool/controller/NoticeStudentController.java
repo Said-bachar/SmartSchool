@@ -65,6 +65,11 @@ public class NoticeStudentController implements Initializable{
  }
 
     @FXML
+    void goHomeStudent(MouseEvent event) {
+         this.stageManager.switchScene(FxmlView.HOMESTUDENT);
+    }
+    
+    @FXML
     void showMore(ActionEvent event) {
     	Notice selectedNotice = notice_student_tab.getSelectionModel().getSelectedItem();
     	
@@ -74,18 +79,18 @@ public class NoticeStudentController implements Initializable{
         pane.setHgap(5.5);
         pane.setVgap(5.5);
         
-        Label l1 = new Label("Message:");
-        l1.setStyle("-fx-font-family: Arial; -fx-text-alignment : center; -fx-font-size : 30px; -fx-font-weight: 500; -fx-text-fill: #ff4007" );
-        pane.add(l1, 0, 0);
+        Label l1 = new Label("Message");
+        l1.setStyle("-fx-font-family: Arial; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-text-alignment : center; -fx-font-size : 20px; -fx-font-weight: 500; -fx-text-fill: #ff4007");
+        pane.add(l1, 1, 0);
         
         TextArea Message = new TextArea(selectedNotice.getMessage());
-        Message.setStyle("-fx-font-family: Arial;-fx-font-size : 18px; -fx-font-weight: 500; -fx-text-fill: #000; -fx-background-color:#e4e4e4");
+        Message.setStyle("-fx-font-family: Arial; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);-fx-font-size : 18px; -fx-font-weight: 500; -fx-text-fill: #00154f; -fx-background-color:#e4e4e4");
         Message.setEditable(false);
         pane.add(Message, 1, 1);
         
         Scene scene = new Scene(pane);
         Stage primaryStage = new Stage();
-        primaryStage.setTitle("Voir plus"); 
+        primaryStage.setTitle("See More"); 
         primaryStage.setScene(scene); 
         primaryStage.show(); // Display the stage
         
