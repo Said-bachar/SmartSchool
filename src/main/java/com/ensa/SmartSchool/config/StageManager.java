@@ -13,7 +13,9 @@ import org.slf4j.Logger;
 import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import lombok.Data;
 
 @Data 
@@ -38,8 +40,10 @@ public class StageManager {
         Scene scene = prepareScene(rootnode);
         //scene.getStylesheets().add("/styles/Styles.css");
         
-       // primaryStage.initStyle(StageStyle.TRANSPARENT); //Not oblg
-       // primaryStage.setResizable(false); // desactivate resize of stages
+        //primaryStage.initStyle(StageStyle.TRANSPARENT); //Not oblg
+        // primaryStage.setResizable(false); // desactivate resize of stages
+        Image iconApp = new Image("/static/PNG@2_white_icons/icons8_s_128px_2.png");
+        primaryStage.getIcons().add(iconApp);
         primaryStage.setTitle(title);
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(800.0);

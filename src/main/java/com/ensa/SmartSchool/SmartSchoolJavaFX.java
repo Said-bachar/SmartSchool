@@ -32,8 +32,12 @@ public class SmartSchoolJavaFX extends Application{
 				genericApplicationContext.registerBean(Parameters.class, () -> getParameters());
 				genericApplicationContext.registerBean(HostServices.class, () -> getHostServices());
 			}};
-		        this.context = new SpringApplicationBuilder().sources(SmartSchoolApplication.class).initializers(initializer).build()
-				      .run(getParameters().getRaw().toArray(new String[0]));
+		       // this.context = new SpringApplicationBuilder().sources(SmartSchoolApplication.class).initializers(initializer).build()
+				   //   .run(getParameters().getRaw().toArray(new String[0]));
+			
+			 SpringApplicationBuilder builder = new SpringApplicationBuilder().sources(SmartSchoolApplication.class).initializers(initializer);
+		     builder.headless(false);
+		     this.context=builder.build().run(getParameters().getRaw().toArray(new String[0]));
 	
 }
 

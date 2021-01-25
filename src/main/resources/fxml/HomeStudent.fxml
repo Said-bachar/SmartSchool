@@ -49,11 +49,11 @@
                         </Text>
                      </children>
                   </Pane>
-                  <Pane layoutX="32.0" layoutY="171.0" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
+                  <Pane layoutX="32.0" layoutY="171.0" onMouseClicked="#goCourses" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
                      <children>
-                        <Pane layoutY="-5.0" prefHeight="99.0" prefWidth="40.0" style="-fx-background-color: #b72801;">
+                        <Pane layoutY="-5.0" onMouseClicked="#goCourses" prefHeight="99.0" prefWidth="40.0" style="-fx-background-color: #b72801;">
                            <children>
-                              <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="5.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="5.0" layoutY="37.0" onMouseClicked="#goCourses" pickOnBounds="true" preserveRatio="true">
                                  <effect>
                                     <DropShadow />
                                  </effect>
@@ -112,9 +112,9 @@
                         </Text>
                      </children>
                   </Pane>
-                  <Pane layoutX="376.0" layoutY="39.0" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
+                  <Pane layoutX="376.0" layoutY="39.0" onMouseClicked="#goDocuments" prefHeight="90.0" prefWidth="150.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
                      <children>
-                        <Pane layoutY="-4.0" prefHeight="99.0" prefWidth="40.0" style="-fx-background-color: #b72801;">
+                        <Pane layoutY="-4.0" onMouseClicked="#goDocuments" prefHeight="99.0" prefWidth="40.0" style="-fx-background-color: #b72801;">
                            <children>
                               <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="4.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                                  <effect>
@@ -174,7 +174,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="64.0" onMouseClicked="#goHome" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="64.0" onMouseClicked="#goHome" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -186,7 +186,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="101.0" onMouseClicked="#goNotices" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="101.0" onMouseClicked="#goNotices" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" onMouseClicked="#goNotices" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -198,9 +198,9 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="142.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="142.0" onMouseClicked="#goDocuments" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="2.0" onMouseClicked="#goDocuments" pickOnBounds="true" preserveRatio="true">
                            <effect>
                               <DropShadow />
                            </effect>
@@ -210,9 +210,9 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="177.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="177.0" onMouseClicked="#goCourses" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="6.0" onMouseClicked="#goCourses" pickOnBounds="true" preserveRatio="true">
                            <effect>
                               <DropShadow />
                            </effect>
@@ -222,7 +222,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="210.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="210.0" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -234,7 +234,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="246.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="246.0" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <effect>

@@ -98,6 +98,32 @@ NOTICESTUDENT {
     }
 
 },
+COURSESSTUDENT1 {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("CoursesStudent1.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/CoursesStudent1.fxml";
+    }
+
+},
+COURSESSTUDENT2 {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("CoursesStudent2.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/CoursesStudent2.fxml";
+    }
+
+},
 HOMEADMIN {
 	
     @Override
@@ -108,6 +134,19 @@ HOMEADMIN {
     @Override
 	public String getFxmlFile() {
         return "/fxml/HomeAdmin.fxml";
+    }
+
+},
+STUDENTDOCUMENTS {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("StudentDocuments.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/StudentDocuments.fxml";
     }
 
 };

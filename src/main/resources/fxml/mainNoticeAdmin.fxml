@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -37,7 +38,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="64.0" onMouseClicked="#goHomeAdmin" prefHeight="40.0" prefWidth="54.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="64.0" onMouseClicked="#goHomeAdmin" prefHeight="40.0" prefWidth="55.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHomeAdmin" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -47,9 +48,14 @@
                         <Image url="@../static/PNG@2_white_icons/icons8_home_48px.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="14.0" layoutY="3.0" onMouseClicked="#goHomeAdmin" prefHeight="26.0" prefWidth="23.0">
+                     <tooltip>
+                        <Tooltip text="Home" />
+                     </tooltip>
+                  </Label>
                </children>
             </Pane>
-            <Pane layoutY="101.0" onMouseClicked="#goMainNotice" prefHeight="40.0" prefWidth="54.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="101.0" onMouseClicked="#goMainNotice" prefHeight="40.0" prefWidth="55.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" onMouseClicked="#goMainNotice" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -59,9 +65,14 @@
                         <Image url="@../static/PNG@2_white_icons/icons8_Topic_Push_Notification_100px.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="11.0" layoutY="-1.0" onMouseClicked="#goMainNotice" prefHeight="37.0" prefWidth="30.0">
+                     <tooltip>
+                        <Tooltip text="Notices" />
+                     </tooltip>
+                  </Label>
                </children>
             </Pane>
-            <Pane layoutY="142.0" prefHeight="40.0" prefWidth="54.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="142.0" prefHeight="40.0" prefWidth="55.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -73,7 +84,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="177.0" prefHeight="40.0" prefWidth="54.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="177.0" prefHeight="40.0" prefWidth="55.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -85,7 +96,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="210.0" prefHeight="40.0" prefWidth="54.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="210.0" prefHeight="40.0" prefWidth="55.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -97,7 +108,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="246.0" prefHeight="40.0" prefWidth="54.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="246.0" prefHeight="40.0" prefWidth="55.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -193,6 +204,6 @@
             <Image url="@../static/PNG@2_white_icons/icons8_attention_60px.png" />
          </image>
       </ImageView>
-      <TextField fx:id="pub_by_title" layoutX="88.0" layoutY="66.0" prefHeight="30.0" prefWidth="234.0" promptText="Title of the notice tos earch..." style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+      <TextField fx:id="pub_by_title" layoutX="88.0" layoutY="66.0" prefHeight="30.0" prefWidth="234.0" promptText="Title of the notice tos search..." style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
    </children>
 </AnchorPane>

@@ -55,5 +55,16 @@ public class HomeStudentController implements Initializable{
 	    void goNotices(MouseEvent event) {
 	    	this.stageManager.switchScene(FxmlView.NOTICESTUDENT);
 	    }
+	    
+
+	    @FXML
+	    void goCourses(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.COURSESSTUDENT1);
+	    }
+	    
+	    @FXML
+	    void goDocuments(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.STUDENTDOCUMENTS);
+	    }
 
 }

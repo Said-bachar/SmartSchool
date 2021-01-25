@@ -174,7 +174,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="64.0" onMouseClicked="#goHome" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="64.0" onMouseClicked="#goHome" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -186,7 +186,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="101.0" onMouseClicked="#goMainNotice" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="101.0" onMouseClicked="#goMainNotice" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" onMouseClicked="#goMainNotice" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -198,7 +198,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="142.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="142.0" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -210,7 +210,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="177.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="177.0" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -222,7 +222,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="210.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="210.0" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <effect>
@@ -234,7 +234,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutY="246.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+                  <Pane layoutY="246.0" prefHeight="40.0" prefWidth="51.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                      <children>
                         <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <effect>

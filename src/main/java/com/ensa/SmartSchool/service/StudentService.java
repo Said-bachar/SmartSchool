@@ -68,5 +68,9 @@ public class StudentService {
         public Student getStudentByEmail(String email) {
     		return studentDao.getStudentByEmail(email);
     	}
+        
+        public boolean updateMaxAttempts(Student student) {
+        	return studentDao.updateMaxAttempts(student);
+        }
 
 }

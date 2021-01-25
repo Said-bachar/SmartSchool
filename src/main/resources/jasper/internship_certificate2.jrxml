@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="internship_2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="fb8dbfc4-53e4-445c-a8c6-e2cd4c4c8741">
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="748" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="556" height="16" backcolor="rgba(44, 168, 133, 0.4745098)" uuid="a46439da-b875-42fe-877d-aee9b813eed6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Article 8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="26" width="556" height="94" uuid="1e5b4608-1f8f-4abd-aed0-8aff44679953"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Le stage fait partie intégrante du cursus scolaire de l'ENSA. Il donne lieu à un rapport, à une soutenance et à une évaluation de l'entreprise selon une grille proposés par l'école.        			                      Une évalutaion du travail de l'étudiant (e) sera redirigée par le maitre du stage, et transmise a l'ENSA.  Ce document doit être rempli en présence du stagiaire quelques jours avant la fin du stage.Le stagiaire devra soumettre son rapport de stage au maitre de stage avant de le transmettre à son établissement.En cas de confidentialité , le rapport est, après son évaluation par l'école, renvoyé à l'entreprise.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="120" width="556" height="16" backcolor="rgba(44, 168, 133, 0.4745098)" uuid="002148c3-5f9a-4895-bf20-10aaf3472658">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Article 9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="555" height="54" uuid="712dc66e-8b4f-4eb7-a08d-b479e2ac1a8c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[la propriété des résultats( brevetables ou non) des études ou des travaux auxquels le stagiaire participera au cours de son stage revient de plein droit à.................................................................... qui en a la libre disposition.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="200" width="556" height="16" backcolor="rgba(44, 168, 133, 0.4745098)" uuid="3c2089d3-4169-411e-8fa1-8716a7a706b7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Article 10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="230" width="556" height="114" uuid="1f0739c6-36fc-41f8-b08a-50b52d45d121"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Le stagaire est soumis à une obligation de confidentialité absolue. En particulier, il ne pourra transmettre à aucun tiers et sous quelque forme que ce soit, sans l'accord préalable écrit du responsable les savoir-faires, documents, résultats d'études, dossiers, logiciels, maquettes, procédures d'accès...qu'il sera amené à élaborer, ou les informations d'ordre technique ou commercial dont il aurait eu connaissance dans le cadre de l'éxécution de son stage. Le stagiaire s'engage également à n'utiliser aucun de ces éléments à des fins autres que celles définies par la convention cadre ou la convention de stage ou requise pour l'éxecution des tâches prévues par le responsable du stage.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="40" y="380" width="240" height="173" uuid="6ca816a5-442d-456f-993a-87cea696ceff"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="380" width="240" height="173" uuid="b41e54fc-aa2d-4b68-bf72-9f9c0db73233">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="40" y="553" width="240" height="173" uuid="d51ed734-8088-43bc-b52b-d29a99e961ed"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="553" width="240" height="173" uuid="020ab3fc-5eed-4cf6-b126-9dbdfa568afd">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="90" y="390" width="120" height="30" uuid="1ae4a95a-1d9a-460e-af19-7a7731df406d"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lu et approuvé  Signature de l'étudiant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="390" width="170" height="30" uuid="b518a42a-0340-4675-b87d-d6f5e3803082"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lu et approuvé                             Le Coordinateur de la filière]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="555" width="110" height="16" uuid="9a4ae00b-a46d-4bf0-9a61-6874639f2d3b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lu et Approuvé]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="570" width="158" height="19" uuid="6ee27d94-6b58-45e8-b6b9-f68102f6d428">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Le Directeur de l'Ecole]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="584" width="220" height="30" uuid="d5f8980e-09db-49c8-aeb7-803e0e050ec8">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nationale des Scienses Appliquées]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="560" width="110" height="16" uuid="db3912b6-1868-4bb1-9bd4-ce89bf3b4d49">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lu et Approuvé]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="580" width="158" height="19" uuid="b4ddea6b-3a4c-4805-9f79-9c68c09596e2">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Le Directeur de la Société]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="273" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="220" width="510" height="16" uuid="4cc8f3a8-4173-4feb-a78a-c455ef2522f4">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ecole Nationale des Sciences Appliquées de Marrakech - Boulevard Abdelkarimkhattabi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="100" width="131" height="22" uuid="5b27df57-1f5e-424a-8e2b-6d4e754d1b87"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Année 2020/2021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="240" width="100" height="16" uuid="044485ed-a49e-45f1-9445-9a66a45b98bc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[BP 575 Marrakech ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="240" width="100" height="18" uuid="1ca72f04-9d99-414a-8238-587e1b70b88f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[0524 43 47 45/46 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="240" width="100" height="21" uuid="9a15bf71-82e6-45e1-90bd-9df81f19fc45">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[0524 43 47 40]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="190" width="555" height="1" uuid="7abd621e-4144-4dca-8c92-9b80c72f5904">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

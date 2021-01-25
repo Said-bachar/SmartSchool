@@ -76,5 +76,11 @@ JdbcTemplate jdbcTemplate;
 		
 		return jdbcTemplate.queryForObject(sql, new StudentMapper(),email);
 	}
+	
+	public boolean updateMaxAttempts(Student student) {
+		String sql="UPDATE STUDENT SET MAX_ATTEMPTS=MAX_ATTEMPTS-1 WHERE STUDENT_ID=?";
+		jdbcTemplate.update(sql,student.getStudentId());
+		return true;
+	}
 
 }

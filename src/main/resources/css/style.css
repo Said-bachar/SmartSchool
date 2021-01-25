@@ -27,6 +27,10 @@
     -fx-scale-x: 1.1;
 }
 
+.courses:hover {
+    -fx-scale-x: 0.8;
+}
+
 .login-btn:hover {
     -fx-scale-x: 1.1;
 }
@@ -46,6 +50,38 @@
 .linear-grad
 {
     -fx-background-color: linear-gradient(to bottom left,  #00154f, #ff4007);
+}
+.linear-grad1
+{
+    -fx-background-color: linear-gradient(to bottom left,  #373B44, #4286f4);
+}
+.linear-grad2
+{
+    -fx-background-color: linear-gradient(to bottom left,  #f12711, #f5af19);
+}
+.linear-grad3
+{
+    -fx-background-color: linear-gradient(to bottom left,  #8360c3, #2ebf91);
+}
+.linear-grad4
+{
+    -fx-background-color: linear-gradient(to bottom left,  #22c1c3, #fdbb2d);
+}
+.linear-grad5
+{
+    -fx-background-color: linear-gradient(to bottom left, #ee0979, #ff6a00);
+}
+.linear-grad6
+{
+    -fx-background-color: linear-gradient(to bottom left,  #00154f, #ff4007);
+}
+.linear-grad7
+{
+    -fx-background-color: linear-gradient(to bottom left,  #fc354c, #0abfbc);
+}
+.linear-grad8
+{
+    -fx-background-color: linear-gradient(to bottom left,  #fdfc47, #24fe41);
 }
 
 

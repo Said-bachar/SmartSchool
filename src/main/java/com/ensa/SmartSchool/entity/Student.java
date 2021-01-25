@@ -18,6 +18,7 @@ public class Student {
 	private int studentId;
 	private Date birthDate;
 	private String phoneNumber;
+	private int maxAttempts;
 	
 	
 }

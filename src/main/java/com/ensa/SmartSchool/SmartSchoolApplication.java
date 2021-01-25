@@ -1,8 +1,8 @@
 package com.ensa.SmartSchool;
 
-import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+//import org.springframework.context.ConfigurableApplicationContext;
 import javafx.application.Application;
 
 @SpringBootApplication
