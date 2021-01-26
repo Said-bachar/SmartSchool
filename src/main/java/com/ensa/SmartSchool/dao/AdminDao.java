@@ -1,11 +1,15 @@
 package com.ensa.SmartSchool.dao;
 
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
 import com.ensa.SmartSchool.entity.Admin;
 import com.ensa.SmartSchool.mappers.AdminMapper;
@@ -15,6 +19,9 @@ public class AdminDao {
 
 JdbcTemplate jdbcTemplate;
 	
+    @Autowired
+    private RestTemplate restTemplate;
+    
 	@Autowired
 	public AdminDao(JdbcTemplate jdbcTemplate) {
 		
@@ -25,26 +32,31 @@ JdbcTemplate jdbcTemplate;
 	
 	public List<Admin> getAdmins() {
 			
-		return jdbcTemplate.query("select * from ADMIN", new AdminMapper());
+		String AdminResourceUrl = "http://localhost:8081/admin/getAdmins";
+		ResponseEntity<Admin[]> response = restTemplate.getForEntity(AdminResourceUrl, Admin[].class);
+		Admin[] adminsTab=response.getBody();
+		List<Admin> admins=Arrays.asList(adminsTab);
+		return admins;
 	}
 	
 	public Admin getAdmin(String username) {
-		String sql = "SELECT * FROM ADMIN WHERE USERNAME=?";
-		return jdbcTemplate.queryForObject(sql, new AdminMapper(),username);
-		
+		 String AdminResourceUrl = "http://localhost:8081/admin/getAdmin/username="+username;
+		 HttpEntity<String> request = new HttpEntity<>(username);
+		 return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
 		
 	}
-	public boolean create(Admin admin) {
-		String sql="INSERT INTO ADMIN(username,password)VALUES (?,?)";
-		jdbcTemplate.update(sql,admin.getUsername(),admin.getPassword());
-		return true;
+	public Admin create(Admin admin) {
+		String AdminResourceUrl = "http://localhost:8081/admin/create";
+		 HttpEntity<Admin> request = new HttpEntity<>(admin);
+		 return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
 		
 	}
 	
-	public boolean updateUsername(Admin admin, String username) {
-		String sql="UPDATE Admin SET Username=? WHERE Username=?";
-		jdbcTemplate.update(sql,username,admin.getUsername());
-		return true;
+	public Admin updateUsername(Admin admin, String username) {
+		String AdminResourceUrl = "http://localhost:8081/admin/updateUsername/username="+username;
+		System.out.println(username);
+		HttpEntity<Admin> request =new HttpEntity<>(admin);
+		return restTemplate.postForObject(AdminResourceUrl,request,Admin.class);
 
 	}
 	public boolean updatePassword(Admin admin,String password) {
@@ -52,10 +64,10 @@ JdbcTemplate jdbcTemplate;
 		jdbcTemplate.update(sql,password,admin.getUsername());
 		return true;
 	}
-	public boolean delete(Admin admin) {
-		String sql="DELETE FROM ADMIN WHERE Username=?";
-		jdbcTemplate.update(sql,admin.getUsername());
-		return true;
+	public Admin delete(Admin admin) {
+		String AdminResourceUrl = "http://localhost:8081/admin/delete";
+		HttpEntity<Admin> request = new HttpEntity<>(admin);
+		return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
 	}
 	
 }
