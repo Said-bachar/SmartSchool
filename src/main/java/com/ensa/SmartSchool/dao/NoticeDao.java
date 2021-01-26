@@ -1,10 +1,15 @@
 package com.ensa.SmartSchool.dao;
 
 import java.sql.Date;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
 import com.ensa.SmartSchool.entity.Notice;
 import com.ensa.SmartSchool.mappers.NoticeMapper;
 
@@ -12,57 +17,63 @@ import com.ensa.SmartSchool.mappers.NoticeMapper;
 @Component
 public class NoticeDao {
 
-JdbcTemplate jdbcTemplate;
-	
 	@Autowired
-	public NoticeDao(JdbcTemplate jdbcTemplate) {
-		
-		this.jdbcTemplate = jdbcTemplate;
-	}
-	
-	public List<Notice> getNotices() {
-		return jdbcTemplate.query("SELECT * FROM NOTICE", new NoticeMapper());
-	}
-	
-	public Notice getNoticeByTitle(String title) {
-		String sql = "SELECT * FROM NOTICE WHERE TITLE=?";
-		return jdbcTemplate.queryForObject(sql, new NoticeMapper(), title);
-	}
+	private RestTemplate restTemplate;
 
-	
-	public Notice getNoticeByPublicationDate(String publicationDate) {
-		String sql = "SELECT * FROM NOTICE WHERE PUBLICATION_DATE=?";
-		return jdbcTemplate.queryForObject(sql, new NoticeMapper(), publicationDate);
-	}
-	
-	public boolean create(Notice notice) {
-		String sql = "INSERT INTO NOTICE(title, publication_date, message) VALUES(?, ?, ?)";
-		jdbcTemplate.update(sql, notice.getTitle(), notice.getPublicationDate(), notice.getMessage());
-		return true;
-	}
-	
-	public boolean updateMessage(Notice notice, String message) {
-		String sql = "UPDATE NOTICE SET MESSAGE=? WHERE NOTICE_ID=?";
-		jdbcTemplate.update(sql, message, notice.getNoticeId());
-		return true;
-	}
-	
-	public boolean updateTitle(Notice notice, String title) {
-		String sql = "UPDATE NOTICE SET TITLE=? WHERE NOTICE_ID=?";
-		jdbcTemplate.update(sql, title, notice.getNoticeId());
-		return true;
-	}
-	
-	public boolean updatePublicationDate(Notice notice, Date date) {
-		String sql = "UPDATE NOTICE SET PUBLICATION_DATE=? WHERE NOTICE_ID=?";
-		jdbcTemplate.update(sql, date, notice.getNoticeId());
-		return true;
-	}
-	
-	public boolean delete(Notice notice) {
-		String sql="DELETE FROM NOTICE WHERE NOTICE_ID=?";
-		jdbcTemplate.update(sql, notice.getNoticeId());
-		return true;
-	}
+		
+		public List<Notice> getNotices() {
+			String NoticeResourceUrl = "http://localhost:8081/notice/getNotices";
+			ResponseEntity<Notice[]> response = restTemplate.getForEntity(NoticeResourceUrl, Notice[].class);
+			Notice[] noticesTab=response.getBody();
+			List<Notice> notices=Arrays.asList(noticesTab);
+			return notices;
+		}
+		
+		public Notice getNoticeByTitle(String title) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/getNoticeByTitle/title=" + title;
+			HttpEntity<String> request = new HttpEntity<>(title);
+			 return restTemplate.postForObject(NoticeResourceUrl, request, Notice.class);
+		}
+
+		
+		public Notice getNoticeByPublicationDate(String publicationDate) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/getNoticeByPublicationDate/date="+ publicationDate;
+			HttpEntity<String> request = new HttpEntity<>(publicationDate);
+			 return restTemplate.postForObject(NoticeResourceUrl, request, Notice.class);
+		}
+		
+		public Notice create(Notice notice) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/create";
+			HttpEntity<Notice> request=new HttpEntity<Notice>(notice);
+			
+			return restTemplate.postForObject(NoticeResourceUrl, request, Notice.class);
+			
+		}
+		
+		
+		public Notice updateMessage(Notice notice, String message) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/updateMessage/message="+message;
+			HttpEntity<Notice> request =new HttpEntity<>(notice);
+			return restTemplate.postForObject(NoticeResourceUrl,request,Notice.class);
+		}
+		
+		public Notice updateTitle(Notice notice, String title) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/updateTitle/title="+title;
+			HttpEntity<Notice> request =new HttpEntity<>(notice);
+			return restTemplate.postForObject(NoticeResourceUrl,request,Notice.class);
+		}
+		
+		public Notice updatePublicationDate(Notice notice, String date) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/updatePublicationDate/date="+date;
+			HttpEntity<Notice> request =new HttpEntity<>(notice);
+			return restTemplate.postForObject(NoticeResourceUrl,request,Notice.class);
+		}
+		
+		public Notice delete(Notice notice) {
+			String NoticeResourceUrl = "http://localhost:8081/notice/delete";
+			HttpEntity<Notice> request = new HttpEntity<>(notice);
+			return restTemplate.postForObject(NoticeResourceUrl, request, Notice.class);
+		}
+		
 	
 }
