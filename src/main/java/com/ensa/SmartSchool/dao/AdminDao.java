@@ -2,19 +2,14 @@ package com.ensa.SmartSchool.dao;
 
 
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
-
 import java.util.Arrays;
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
+
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +18,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
+
 
 
 import com.ensa.SmartSchool.entity.Admin;
@@ -36,23 +32,13 @@ import com.ensa.SmartSchool.mappers.AdminMapper;
 public class AdminDao {
 
 
-	@Autowired
-	private RestTemplate restTemplate;
 
-	JdbcTemplate jdbcTemplate;
-
-	@Autowired
-	public AdminDao(JdbcTemplate jdbcTemplate) {
-		
-		this.jdbcTemplate = jdbcTemplate;
-	}
-
-
-	
-	
-	
-	
+    @Autowired
+    private RestTemplate restTemplate;
+    
     public List<Admin> getAdmins() {
+			
+
 		String AdminResourceUrl = "http://localhost:8081/admin/getAdmins";
 		ResponseEntity<Admin[]> response = restTemplate.getForEntity(AdminResourceUrl, Admin[].class);
 		Admin[] adminsTab=response.getBody();
@@ -66,11 +52,15 @@ public class AdminDao {
 		 return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
 		
 	}
+
+	
 	
 	public Admin create(Admin admin) {
-		 String AdminResourceUrl = "http://localhost:8081/admin/create";
+		String AdminResourceUrl = "http://localhost:8081/admin/create";
 		 HttpEntity<Admin> request = new HttpEntity<>(admin);
 		 return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
+		
+
 	}
 	
 	public Admin updateUsername(Admin admin, String username) {
@@ -80,13 +70,13 @@ public class AdminDao {
 		return restTemplate.postForObject(AdminResourceUrl,request,Admin.class);
 
 	}
-	public boolean updatePassword(Admin admin,String password) {
-		String sql="UPDATE ADMIN SET PASSWORD=? WHERE username=?";
-		jdbcTemplate.update(sql,password,admin.getUsername());
-		return true;
+	public Admin updatePassword(Admin admin,String password) {
+		String AdminResourceUrl = "http://localhost:8081/admin/updatePassword/password="+password;
+		
+		HttpEntity<Admin> request =new HttpEntity<>(admin);
+		return restTemplate.postForObject(AdminResourceUrl,request,Admin.class);
 	}
 
-	
 	public Admin delete(Admin admin) {
 		String AdminResourceUrl = "http://localhost:8081/admin/delete";
 		HttpEntity<Admin> request = new HttpEntity<>(admin);
