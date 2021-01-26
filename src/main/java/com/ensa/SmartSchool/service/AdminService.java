@@ -26,9 +26,21 @@ public Admin getAdmin(String username) {
 		return this.adminDao.getAdmin(username);
 	}
 
-	public boolean create(Admin admin) {
+
+
+
+	public Admin create(Admin admin) {
 
 		return adminDao.create(admin);
+	}
+	
+	public Admin updateUsername(Admin admin, String username) {
+
+		return adminDao.updateUsername(admin, username);
+	}
+	
+	public Admin delete(Admin admin) {
+		return adminDao.delete(admin);
 	}
 
 	
