@@ -2,8 +2,9 @@ package com.ensa.SmartSchool;
 
 //import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.springframework.context.ConfigurableApplicationContext;
+
 import javafx.application.Application;
+
 
 @SpringBootApplication
 public class SmartSchoolApplication {
@@ -13,6 +14,8 @@ public class SmartSchoolApplication {
 		Application.launch(SmartSchoolJavaFX.class, args);
 		//ConfigurableApplicationContext ac= SpringApplication.run(SmartSchoolApplication.class, args);
 		//StudentService sr = ac.getBean(StudentService.class);
+		
+		
 						
 	}
 	
