@@ -27,10 +27,7 @@ public class AdminService {
 		return this.adminDao.getAdmin(username);
 	}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 100d7219ad1c7b1e87f7dd69a2158a45ee48a15a
 	public Admin create(Admin admin) {
 
 		return adminDao.create(admin);
@@ -42,14 +39,11 @@ public class AdminService {
 public Admin delete(Admin admin) {
 		return adminDao.delete(admin);
 	}
-<<<<<<< HEAD
-=======
-    
+
 	public Admin updateUsername(Admin admin, String username) {
 
 		return adminDao.updateUsername(admin, username);
 	}
->>>>>>> 100d7219ad1c7b1e87f7dd69a2158a45ee48a15a
 	
 	public Admin updatePassword(Admin admin, String password) {
 
