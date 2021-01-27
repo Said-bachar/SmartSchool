@@ -1,11 +1,16 @@
 package com.ensa.SmartSchool.dao;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
+import com.ensa.SmartSchool.entity.Admin;
 import com.ensa.SmartSchool.entity.Level;
 import com.ensa.SmartSchool.entity.Module;
 import com.ensa.SmartSchool.entity.Professor;
@@ -16,42 +21,62 @@ import com.ensa.SmartSchool.mappers.ProfessorMapper;
 @Component
 public class LevelDao {
 	
-JdbcTemplate jdbcTemplate;
+    JdbcTemplate jdbcTemplate;
+    
+    @Autowired
+	private RestTemplate restTemplate;
 	
-	@Autowired
-	public LevelDao(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-	public List<Level> getLevels() {	
-		return jdbcTemplate.query("select * from level", new LevelMapper());
-	}
-	
-	public List<Module> getModules(String levelName){
-		return jdbcTemplate.query("select * from module,level where module.level_name=level.level_name and level.level_name=?", new ModuleMapper(),levelName);
-	}
-	public List<Professor> getProfessors(String levelName){
-		return jdbcTemplate.query("select * from professor,level where professor.level_name=level.level_name and level.level_name=?", new ProfessorMapper(),levelName);
-	}
-	public boolean create(Level level) {
-		String sql="INSERT INTO level (level_name) VALUES (?)";
-		jdbcTemplate.update(sql,level.getLevelName());
-		return true;	
+	public List<Level> getLevels() {
+		String LevelResourceUrl = "http://localhost:8081/level/getLevels";
+		ResponseEntity<Level[]> response = restTemplate.getForEntity(LevelResourceUrl, Level[].class);
+		Level[] levelsTab=response.getBody();
+		List<Level> levels=Arrays.asList(levelsTab);
+		return levels;
 	}
 	
-	public boolean updateLevelName(Level level,String name) {
-		String sql="UPDATE level SET LEVEL_NAME=? WHERE LEVEL_ID=?";
-		jdbcTemplate.update(sql,name,level.getLevelId());
-		return true;
+	public List<Module> getModules(String levelname) {
+		 String LevelResourceUrl = "http://localhost:8081/level/getModules/levelname="+levelname;
+		 ResponseEntity<Module[]> response = restTemplate.getForEntity(LevelResourceUrl, Module[].class);
+		 Module[] modulesTab=response.getBody();
+		List<Module> modules=Arrays.asList(modulesTab);
+		return modules;
+		
 	}
-	public boolean delete(Level level) {
-		String sql="DELETE FROM LEVEL WHERE LEVEL_ID=?";
-		jdbcTemplate.update(sql,level.getLevelId());
-		return true;
+	
+	public List<Professor> getProfessors(String levelname) {
+		 String LevelResourceUrl = "http://localhost:8081/level/getProfessors/levelname="+levelname;
+		 ResponseEntity<Professor[]> response = restTemplate.getForEntity(LevelResourceUrl, Professor[].class);
+		 Professor[] professorsTab=response.getBody();
+		List<Professor> professors=Arrays.asList(professorsTab);
+		return professors;
+		
 	}
-	public Level getLevel(String name) {
-			
-			return jdbcTemplate.queryForObject("select * from level where level_name=? ",new LevelMapper(),name);	
-		}
+	
+	public Level create(Level level) {
+		 String LevelResourceUrl = "http://localhost:8081/level/create";
+		 HttpEntity<Level> request = new HttpEntity<>(level);
+		 return restTemplate.postForObject(LevelResourceUrl, request, Level.class);
+	}
+	
+	public Level updateLevelName(Level level, String levelname) {
+		String LevelResourceUrl = "http://localhost:8081/level/update/levelname="+levelname;
+		HttpEntity<Level> request =new HttpEntity<>(level);
+		return restTemplate.postForObject(LevelResourceUrl,request,Level.class);
+
+	}
+	
+	public Level delete(Level level) {
+		String LevelResourceUrl = "http://localhost:8081/level/delete";
+		HttpEntity<Level> request = new HttpEntity<>(level);
+		return restTemplate.postForObject(LevelResourceUrl, request, Level.class);
+	}	
+	
+	public Level getLevel(String levelname) {
+		 String LevelResourceUrl = "http://localhost:8081/level/getLevel/levelname="+levelname;
+		 HttpEntity<String> request = new HttpEntity<>(levelname);
+		 return restTemplate.postForObject(LevelResourceUrl, request, Level.class);
+		
+	}
 	
 }
 	
