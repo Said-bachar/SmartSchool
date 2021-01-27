@@ -1,86 +1,85 @@
 package com.ensa.SmartSchool.dao;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
+import com.ensa.SmartSchool.entity.Professor;
 import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.mappers.StudentMapper;
 
 @Component
 public class StudentDao {
 
-JdbcTemplate jdbcTemplate;
-	
-	@Autowired
-	public StudentDao(JdbcTemplate jdbcTemplate) {
-		
-		this.jdbcTemplate = jdbcTemplate;
-	}
 
+	@Autowired
+    private RestTemplate restTemplate;
 
 	
 	public List<Student> getStudents() {
 			
-		return jdbcTemplate.query("select * from student", new StudentMapper());
+		String StudentResourceUrl = "http://localhost:8081/student/getStudents";
+		ResponseEntity<Student[]> response = restTemplate.getForEntity(StudentResourceUrl, Student[].class);
+		Student[] studentsTab=response.getBody();
+		List<Student> students=Arrays.asList(studentsTab);
+		return students;
 	}
 	
-	public Student getStudent(String firstName, String lastName) {
+	public Student getStudent(int id) {
+		String StudentResourceUrl = "http://localhost:8081/student/getStudent/id="+id;
+		 HttpEntity<Integer> request = new HttpEntity<Integer>(id);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
+	}
+	
+	public Student create(Student student) {
+		String StudentResourceUrl = "http://localhost:8081/student/create";
+		 HttpEntity<Student> request = new HttpEntity<Student>(student);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
 		
-		return jdbcTemplate.queryForObject("select * from student where first_name = ? and last_name= ? ",new StudentMapper(),
-				firstName, lastName);
+	}
+	
+	public Student updateEmail(Student student, String email) {
 		
-		
-	}
-	public boolean create(Student student) {
-		String sql="INSERT INTO STUDENT(first_name,last_name,email,password,birth_date,phone_number)VALUES (?,?,?,?,?,?)";
-		jdbcTemplate.update(sql,student.getFirstName(),student.getLastName(),student.getEmail(), student.getPassword(),
-				student.getBirthDate(),student.getPhoneNumber());
-		return true;
-		
+		String StudentResourceUrl = "http://localhost:8081/student/updateEmail/email="+email;
+		 HttpEntity<Student> request = new HttpEntity<Student>(student);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
 	}
 	
-	public boolean updateEmail(Student student, String email) {
-		String sql="UPDATE STUDENT SET EMAIL=? WHERE STUDENT_ID=?";
-		jdbcTemplate.update(sql,email,student.getStudentId());
-		return true;
+	public Student updatePhoneNumber(Student student,String phoneNumber) {
+		String StudentResourceUrl = "http://localhost:8081/student/updatePhoneNumber/phoneNumber="+phoneNumber;
+		 HttpEntity<Student> request = new HttpEntity<Student>(student);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
 	}
 	
-	public boolean updatePhoneNumber(Student student,String phoneNumber) {
-		String sql="UPDATE STUDENT SET PHONE_NUMBER=? WHERE STUDENT_ID=?";
-		jdbcTemplate.update(sql,phoneNumber,student.getStudentId());
-		return true;
+	public Student updatePassword(Student student,String password) {
+		 String StudentResourceUrl = "http://localhost:8081/student/updatePassword/password="+password;
+		 HttpEntity<Student> request = new HttpEntity<Student>(student);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
+	}
+	public Student delete(Student student) {
+		String StudentResourceUrl = "http://localhost:8081/student/delete";
+		 HttpEntity<Student> request = new HttpEntity<Student>(student);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
 	}
 	
-	public boolean updatePassword(Student student,String password) {
-		String sql="UPDATE STUDENT SET PASSWORD=? WHERE STUDENT_ID=?";
-		jdbcTemplate.update(sql,password,student.getStudentId());
-		return true;
-	}
-	public boolean delete(Student student) {
-		String sql="DELETE FROM STUDENT WHERE STUDENT_ID=?";
-		jdbcTemplate.update(sql, student.getStudentId());
-		return true;
-	}
 	
-	public List<Student> read(){
-		String sql="SELECT * FROM STUDENT";
-		List<Student> list =jdbcTemplate.query(sql,new StudentMapper());
-		return list;
-	}
 	
 	public Student getStudentByEmail(String email) {
-		String sql="SELECT * FROM STUDENT WHERE EMAIL=?";
-		
-		return jdbcTemplate.queryForObject(sql, new StudentMapper(),email);
+		String StudentResourceUrl = "http://localhost:8081/student/getStudentByEmail";
+		 HttpEntity<String> request = new HttpEntity<String>(email);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
 	}
 	
-	public boolean updateMaxAttempts(Student student) {
-		String sql="UPDATE STUDENT SET MAX_ATTEMPTS=MAX_ATTEMPTS-1 WHERE STUDENT_ID=?";
-		jdbcTemplate.update(sql,student.getStudentId());
-		return true;
+	public Student updateMaxAttempts(Student student) {
+		 String StudentResourceUrl = "http://localhost:8081/student/updateMaxAttemps";
+		 HttpEntity<Student> request = new HttpEntity<Student>(student);
+		 return restTemplate.postForObject(StudentResourceUrl, request, Student.class);
+		
 	}
 
 }
