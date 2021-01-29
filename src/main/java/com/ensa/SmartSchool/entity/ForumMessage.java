@@ -1,5 +1,9 @@
 package com.ensa.SmartSchool.entity;
 
+import lombok.Data;
+
+@Data
+
 public class ForumMessage {
 
 	private int id;
