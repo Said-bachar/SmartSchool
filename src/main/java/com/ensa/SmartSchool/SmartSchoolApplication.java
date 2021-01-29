@@ -34,10 +34,10 @@ public class SmartSchoolApplication {
 	
 	public static void main(String[] args) {
 		
-		//Application.launch(SmartSchoolJavaFX.class, args);
+		Application.launch(SmartSchoolJavaFX.class, args);
 		//ConfigurableApplicationContext ac= SpringApplication.run(SmartSchoolApplication.class, args);
 		//StudentService sr = ac.getBean(StudentService.class);
-		ConfigurableApplicationContext ac= SpringApplication.run(SmartSchoolApplication.class, args);
+		//ConfigurableApplicationContext ac= SpringApplication.run(SmartSchoolApplication.class, args);
 		/*AdminService adminService=ac.getBean(AdminService.class);
 		System.out.println(adminService.getAdmins());
 		Admin admin=new Admin();
@@ -48,16 +48,16 @@ public class SmartSchoolApplication {
 		System.out.println(admin.getUsername());
 		adminService.updateUsername(admin, "Ghoujdamy");
 		adminService.delete(admin);*/
-		LevelService levelService=ac.getBean(LevelService.class);
-		/*System.out.println(levelService.getLevels());
+		/*LevelService levelService=ac.getBean(LevelService.class);
+		System.out.println(levelService.getLevels());
 		Level level=new Level();
 		level.setLevelName("gil4");
 		levelService.create(level);
 		System.out.println(levelService.getProfessors("gi4"));
 		Level level=levelService.getLevel("gil4");
-		levelService.updateLevelName(level, "gil3");*/
+		levelService.updateLevelName(level, "gil3");
 		Level level=levelService.getLevel("gil3");
-		levelService.delete(level);
+		levelService.delete(level);*/
 	}
 	
 }
