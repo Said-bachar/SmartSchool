@@ -19,7 +19,7 @@ public class ForumMessageMapper implements RowMapper<ForumMessage> {
 		forumMessage.setId(rs.getInt("forum_message_id"));
 		forumMessage.setContent(rs.getNString("content"));
 		forumMessage.setMessageWriter("message_writer");
-		return null;
+		return forumMessage;
 	}
 
 }
