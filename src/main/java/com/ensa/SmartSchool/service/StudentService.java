@@ -24,40 +24,37 @@ public class StudentService {
 		return this.studentDao.getStudents();
 	}
 
-	public Student getStudent(String firstName, String lastName) {
-		return this.studentDao.getStudent(firstName, lastName);
+	public Student getStudentById(int id) {
+		return this.studentDao.getStudent(id);
 	}
 
-	public boolean create(Student student) {
+	public Student create(Student student) {
 
 		return studentDao.create(student);
 	}
 
-	public boolean updateEmail(Student student, String email) {
+	public Student updateEmail(Student student, String email) {
 
 		return studentDao.updateEmail(student, email);
 	}
 
-	public boolean updatePhoneNumber(Student student, String phoneNumber) {
+	public Student updatePhoneNumber(Student student, String phoneNumber) {
 
 		return studentDao.updatePhoneNumber(student, phoneNumber);
 	}
 
-	public boolean updatePassword(Student student, String password) {
+	public Student updatePassword(Student student, String password) {
 
 		return studentDao.updatePassword(student, password);
 	}
-	public boolean delete(Student student) {
+	public Student delete(Student student) {
 		return studentDao.delete(student);
 	}
 	
-	public List<Student> read() {
-		return studentDao.read();
-	}
 	
         public boolean authenticate(String email, String password) {
 		
-		Student student = studentDao.getStudentByEmail(email);
+		Student student = studentDao.getStudentByEmail( email);
 		
 		if(student.equals(null)) {
 			return false;
@@ -69,7 +66,7 @@ public class StudentService {
     		return studentDao.getStudentByEmail(email);
     	}
         
-        public boolean updateMaxAttempts(Student student) {
+        public Student updateMaxAttempts(Student student) {
         	return studentDao.updateMaxAttempts(student);
         }
 

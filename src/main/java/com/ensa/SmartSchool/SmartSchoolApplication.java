@@ -48,16 +48,6 @@ public class SmartSchoolApplication {
 		System.out.println(admin.getUsername());
 		adminService.updateUsername(admin, "Ghoujdamy");
 		adminService.delete(admin);*/
-		/*LevelService levelService=ac.getBean(LevelService.class);
-		System.out.println(levelService.getLevels());
-		Level level=new Level();
-		level.setLevelName("gil4");
-		levelService.create(level);
-		System.out.println(levelService.getProfessors("gi4"));
-		Level level=levelService.getLevel("gil4");
-		levelService.updateLevelName(level, "gil3");
-		Level level=levelService.getLevel("gil3");
-		levelService.delete(level);*/
 	}
 	
 }

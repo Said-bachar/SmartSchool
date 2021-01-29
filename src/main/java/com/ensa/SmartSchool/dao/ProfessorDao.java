@@ -61,6 +61,13 @@ JdbcTemplate jdbcTemplate;
 		   HttpEntity<Professor> request =new HttpEntity<>(professor);
 		   return restTemplate.postForObject(ProfessorResourceUrl,request,Professor.class);  
 	}
+	
+	public Professor updatePassword(Professor professor,String password) {
+	    String ProfessorResourceUrl = "http://localhost:8081/professor/updatePassword/password=" + password;
+	   HttpEntity<Professor> request =new HttpEntity<>(professor);
+	   return restTemplate.postForObject(ProfessorResourceUrl,request,Professor.class);  
+	}
+	
 	public Professor delete(Professor professor) {
 		String ProfessorResourceUrl = "http://localhost:8081/professor/delete";
 		HttpEntity<Professor> request = new HttpEntity<>(professor);
