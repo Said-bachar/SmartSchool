@@ -149,6 +149,19 @@ STUDENTDOCUMENTS {
         return "/fxml/StudentDocuments.fxml";
     }
 
+},
+FORUM {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("StudentDocuments.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/Forum.fxml";
+    }
+
 };
     
     public abstract String getTitle();

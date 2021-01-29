@@ -30,8 +30,7 @@ public class ForumMessageDao {
 	public List<ForumMessage> getForumMessages() {
 
 		String ForumMessageResourceUrl = "http://localhost:8081/forumMessage/getForumMessages";
-		ResponseEntity<ForumMessage[]> response = restTemplate.getForEntity(ForumMessageResourceUrl,
-				ForumMessage[].class);
+		ResponseEntity<ForumMessage[]> response = restTemplate.getForEntity(ForumMessageResourceUrl,ForumMessage[].class);
 		ForumMessage[] forumMessagesTab = response.getBody();
 		List<ForumMessage> forumMessages = Arrays.asList(forumMessagesTab);
 		return forumMessages;
