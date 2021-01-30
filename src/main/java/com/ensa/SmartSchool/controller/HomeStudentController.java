@@ -66,5 +66,12 @@ public class HomeStudentController implements Initializable{
 	    void goDocuments(MouseEvent event) {
 	    	this.stageManager.switchScene(FxmlView.STUDENTDOCUMENTS);
 	    }
+	    
+	    @FXML
+	    void goForum(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.FORUM);
+	    }
+
+	    
 
 }

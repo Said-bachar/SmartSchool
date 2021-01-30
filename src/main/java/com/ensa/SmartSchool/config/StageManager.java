@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-
+import com.ensa.SmartSchool.entity.Professor;
 import com.ensa.SmartSchool.entity.Student;
 import com.ensa.SmartSchool.view.FxmlView;
 import org.slf4j.Logger;
@@ -26,6 +26,8 @@ public class StageManager {
     private final SmartSchoolJavaFxLoader springFXMLLoader;
     
     private Student student;
+    private Professor professor;
+    private boolean user;
     
     public StageManager(SmartSchoolJavaFxLoader springFXMLLoader, Stage stage) {
         this.springFXMLLoader = springFXMLLoader;

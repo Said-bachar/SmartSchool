@@ -4,26 +4,6 @@ package com.ensa.SmartSchool;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-
-//import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-
-import org.springframework.boot.SpringApplication;
-//import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
-
-import com.ensa.SmartSchool.entity.Admin;
-
-import com.ensa.SmartSchool.entity.Level;
-import com.ensa.SmartSchool.service.AdminService;
-import com.ensa.SmartSchool.service.LevelService;
-
-import com.ensa.SmartSchool.entity.Professor;
-import com.ensa.SmartSchool.service.AdminService;
-import com.ensa.SmartSchool.service.ProfessorService;
-
 //import org.springframework.context.ConfigurableApplicationContext;
 
 import javafx.application.Application;
@@ -48,16 +28,6 @@ public class SmartSchoolApplication {
 		System.out.println(admin.getUsername());
 		adminService.updateUsername(admin, "Ghoujdamy");
 		adminService.delete(admin);*/
-		//LevelService levelService=ac.getBean(LevelService.class);
-		/*System.out.println(levelService.getLevels());
-		Level level=new Level();
-		level.setLevelName("gil4");
-		levelService.create(level);
-		System.out.println(levelService.getProfessors("gi4"));
-		Level level=levelService.getLevel("gil4");
-		levelService.updateLevelName(level, "gil3");*/
-		/*Level level=levelService.getLevel("gil3");
-		levelService.delete(level);*/
 	}
 	
 }

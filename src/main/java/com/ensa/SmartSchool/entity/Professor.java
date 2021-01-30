@@ -9,4 +9,5 @@ public class Professor {
 	private String professorLastName;
 	private int professorId;
 	private String levelName;
+	private String password;
 }

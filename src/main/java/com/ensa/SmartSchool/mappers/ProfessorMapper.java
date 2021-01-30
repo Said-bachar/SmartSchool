@@ -19,6 +19,7 @@ public class ProfessorMapper implements RowMapper<Professor> {
 		professor.setProfessorFirstName(rs.getString("professor_first_name"));
 		professor.setProfessorLastName(rs.getString("professor_last_name"));
 		professor.setLevelName(rs.getString("level_name"));
+		professor.setPassword(rs.getString("password"));
 		return professor;
 	}
 

@@ -68,10 +68,13 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="Professeur" textFill="WHITE">
+                  <Button fx:id="btn_professor" mnemonicParsing="false" onAction="#loginProfessor" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #ff4007; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="Professeur" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="13.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
                <padding>

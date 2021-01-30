@@ -19,6 +19,8 @@ public class ForumMessageMapper implements RowMapper<ForumMessage> {
 		forumMessage.setId(rs.getInt("forum_message_id"));
 		forumMessage.setContent(rs.getNString("content"));
 		forumMessage.setMessageWriter("message_writer");
+		forumMessage.setTopic(rs.getNString("topic"));
+		forumMessage.setPubDate(rs.getDate("pub_date"));
 		return forumMessage;
 	}
 

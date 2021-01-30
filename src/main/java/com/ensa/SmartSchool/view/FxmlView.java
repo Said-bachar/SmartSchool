@@ -46,6 +46,19 @@ LOGINSTUDENT {
       }
   
 },
+LOGINPROFESSOR {
+	
+    @Override
+		public String getTitle() {
+        return getStringFromResourceBundle("LoginProfessor.title");
+    }
+
+    @Override
+		public String getFxmlFile() {
+        return "/fxml/LoginProfessor.fxml";
+    }
+
+},
 HOMESTUDENT {
 	
     @Override
@@ -56,6 +69,19 @@ HOMESTUDENT {
     @Override
 	public String getFxmlFile() {
         return "/fxml/HomeStudent.fxml";
+    }
+
+},
+HOMEPROFESSOR {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("HomeProfessor.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/HomeProfessor.fxml";
     }
 
 },
@@ -154,12 +180,51 @@ FORUM {
 	
     @Override
 	public String getTitle() {
-        return getStringFromResourceBundle("StudentDocuments.title");
+        return getStringFromResourceBundle("Forum.title");
     }
 
     @Override
 	public String getFxmlFile() {
         return "/fxml/Forum.fxml";
+    }
+
+},
+ADDNEWMESSAGE {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("AddNewMessage.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/NewMessageForum.fxml";
+    }
+
+},
+MAINFORUM {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("MainForum.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/mainForum.fxml";
+    }
+
+},
+ANSWERTOMESSAGEFORUM {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("AnswerToMessageForum.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/AnswerToMessageForum.fxml";
     }
 
 };

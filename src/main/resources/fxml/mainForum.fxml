@@ -22,18 +22,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="721.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.MainNoticeAdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="721.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.MainForumController">
    <children>
-      <Button layoutX="568.0" layoutY="400.0" mnemonicParsing="false" onAction="#goNoticeAdmin" prefHeight="30.0" prefWidth="127.0" style="-fx-background-color: #0f0; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,255,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="   Show Answers" textFill="WHITE">
+      <Button layoutX="607.0" layoutY="400.0" mnemonicParsing="false" onAction="#show" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: #0f0; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,255,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="   Show " textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TableView fx:id="notice_admin_table" layoutX="88.0" layoutY="113.0" prefHeight="236.0" prefWidth="608.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+      <TableView fx:id="forum_message_list" layoutX="88.0" layoutY="113.0" prefHeight="236.0" prefWidth="608.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
         <columns>
-          <TableColumn fx:id="publication_date_col" prefWidth="126.4000473022461" text="Date" />
-            <TableColumn fx:id="details_col" minWidth="0.0" prefWidth="279.0" text="Topic" />
-          <TableColumn fx:id="title_col" prefWidth="203.0" text="Written by" />
+          <TableColumn fx:id="publication_date_col" prefWidth="203.0" text="Date" />
+            <TableColumn fx:id="topic_col" minWidth="0.0" prefWidth="203.0" text="Topic" />
+          <TableColumn fx:id="written_by_col" prefWidth="203.0" text="Written by" />
         </columns>
       </TableView>
       <Pane prefHeight="444.0" prefWidth="54.0" style="-fx-background-color: #00154f;">
@@ -134,7 +134,7 @@
             </Pane>
             <Pane layoutY="395.0" prefHeight="49.0" prefWidth="49.0" styleClass="panes" stylesheets="@../css/style.css">
                <children>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: ff4007; -fx-background-radius: 50; -fx-effect: dropshadow(three-pass-box, rgba(220,210,210,0.8), 10, 0, 0, 0);" textFill="#ff4007" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" onMouseClicked="#logout" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: ff4007; -fx-background-radius: 50; -fx-effect: dropshadow(three-pass-box, rgba(220,210,210,0.8), 10, 0, 0, 0);" textFill="#ff4007" />
                   <ImageView fitHeight="18.0" fitWidth="27.0" layoutX="16.0" layoutY="16.0" onMouseClicked="#logout1" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
@@ -171,17 +171,17 @@
             <Image url="@../static/images/ss.png" />
          </image>
       </ImageView>
-      <Button layoutX="468.0" layoutY="401.0" mnemonicParsing="false" onAction="#updateNotice" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: #00154f; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="  Answer" textFill="WHITE">
+      <Button layoutX="498.0" layoutY="401.0" mnemonicParsing="false" onAction="#answer" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: #00154f; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="  Answer" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="572.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="613.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../static/PNG@2_white_icons/icons8_show_password_filled_100px.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="473.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="503.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../static/PNG@2_white_icons/icons8_reply_all_arrow_filled_100px_1.png" />
          </image>
@@ -201,6 +201,6 @@
             <Image url="@../static/PNG@2_white_icons/icons8_attention_60px.png" />
          </image>
       </ImageView>
-      <TextField fx:id="pub_by_title" layoutX="88.0" layoutY="66.0" prefHeight="30.0" prefWidth="234.0" promptText="search by name" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+      <TextField fx:id="search_by_topic" layoutX="88.0" layoutY="66.0" prefHeight="30.0" prefWidth="234.0" promptText="search by topic" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
    </children>
 </AnchorPane>

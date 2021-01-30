@@ -20,10 +20,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="632.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.NoticeAdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="632.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.AddNewMessageController">
    <children>
       <Line endX="103.0" layoutX="424.0" layoutY="40.0" startX="-374.3999938964844" startY="7.62939453125E-6" stroke="#ff4007" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
-      <Button alignment="CENTER" layoutX="438.0" layoutY="354.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #00154f; -fx-background-radius: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text=" Send" textFill="WHITE">
+      <Button alignment="CENTER" layoutX="438.0" layoutY="354.0" mnemonicParsing="false" onAction="#send" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #00154f; -fx-background-radius: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text=" Send" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -165,12 +165,12 @@
       </Label>
       <Label layoutX="77.0" layoutY="138.0" prefHeight="17.0" prefWidth="40.0" text="Topic" textFill="#00154f" />
       <Label layoutX="78.0" layoutY="177.0" text="Message" textFill="#00154f" />
-      <TextArea layoutX="181.0" layoutY="177.0" prefHeight="128.0" prefWidth="336.0" promptText="Message...">
+      <TextArea fx:id="message_id" layoutX="181.0" layoutY="177.0" prefHeight="128.0" prefWidth="336.0" promptText="Message...">
          <effect>
             <DropShadow />
          </effect>
       </TextArea>
-      <TextField layoutX="181.0" layoutY="129.0" prefHeight="25.0" prefWidth="336.0" promptText="Topic of the discussion...">
+      <TextField fx:id="topic_id" layoutX="181.0" layoutY="129.0" prefHeight="25.0" prefWidth="336.0" promptText="Topic of the discussion...">
          <effect>
             <DropShadow />
          </effect>
@@ -191,7 +191,7 @@
             <Image url="@../static/PNG@2_white_icons/icons8_attention_60px.png" />
          </image>
       </ImageView>
-      <Button layoutX="337.0" layoutY="354.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #f00; -fx-background-radius: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="  Cancel" textFill="WHITE">
+      <Button layoutX="337.0" layoutY="354.0" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #f00; -fx-background-radius: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="  Cancel" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>

@@ -163,19 +163,19 @@
             <DropShadow color="#0899ff" />
          </effect>
       </Label>
-      <Label layoutX="83.0" layoutY="188.0" text="Message" textFill="#00154f" />
-      <TextArea layoutX="176.0" layoutY="187.0" prefHeight="133.0" prefWidth="336.0" promptText="Your answer...">
+      <Label layoutX="83.0" layoutY="156.0" text="Message" textFill="#00154f" />
+      <TextArea layoutX="176.0" layoutY="155.0" prefHeight="133.0" prefWidth="336.0" promptText="Your answer...">
          <effect>
             <DropShadow />
          </effect>
       </TextArea>
-      <ImageView fitHeight="17.0" fitWidth="18.0" layoutX="136.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="18.0" layoutX="136.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../static/PNG@2_white_icons/icons8_attention_60px.png" />
          </image>
       </ImageView>
-      <Label layoutX="176.0" layoutY="330.0" prefHeight="17.0" prefWidth="231.0" text="This form includes required fields, marked" textFill="#00154f" />
-      <ImageView fitHeight="17.0" fitWidth="18.0" layoutX="401.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="176.0" layoutY="298.0" prefHeight="17.0" prefWidth="231.0" text="This form includes required fields, marked" textFill="#00154f" />
+      <ImageView fitHeight="17.0" fitWidth="18.0" layoutX="399.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../static/PNG@2_white_icons/icons8_attention_60px.png" />
          </image>
@@ -190,16 +190,5 @@
             <Image url="@../static/PNG@2_white_icons/icons8_cancel_48px_2.png" />
          </image>
       </ImageView>
-      <Label layoutX="83.0" layoutY="157.0" text="Title" textFill="#00154f" />
-      <ImageView fitHeight="17.0" fitWidth="18.0" layoutX="116.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../static/PNG@2_white_icons/icons8_attention_60px.png" />
-         </image>
-      </ImageView>
-      <TextField layoutX="176.0" layoutY="153.0" prefHeight="25.0" prefWidth="336.0" promptText="Title of answer...">
-         <effect>
-            <DropShadow />
-         </effect>
-      </TextField>
    </children>
 </AnchorPane>

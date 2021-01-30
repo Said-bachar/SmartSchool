@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.ensa.SmartSchool.entity.ForumMessage;
 
+
 @Component
 public class ForumMessageDao {
 
@@ -44,6 +45,18 @@ public class ForumMessageDao {
 
 		return restTemplate.postForObject(ForumMessageResourceUrl, request, ForumMessage.class);
 
+	}
+	
+	public ForumMessage updateContent(ForumMessage forumMessage, String content) {
+		String NoticeResourceUrl = "http://localhost:8081/forumMessage/updateContent/content="+content;
+		HttpEntity<ForumMessage> request =new HttpEntity<>(forumMessage);
+		return restTemplate.postForObject(NoticeResourceUrl, request, ForumMessage.class);
+	}
+	
+	public ForumMessage updateTopic(ForumMessage forumMessage, String topic) {
+		String NoticeResourceUrl = "http://localhost:8081/forumMessage/updateTopic/topic="+topic;
+		HttpEntity<ForumMessage> request =new HttpEntity<>(forumMessage);
+		return restTemplate.postForObject(NoticeResourceUrl, request, ForumMessage.class);
 	}
 	
 	public ForumMessage delete(ForumMessage forumMessage) {

@@ -86,6 +86,7 @@ public class LoginStudentController {
 		      alert.showAndWait();*/
 		        Student student=studentService.getStudentByEmail(email.getText());
 	    		this.stageManager.setStudent(student);
+	    		this.stageManager.setUser(false);
 	    		this.stageManager.switchScene(FxmlView.HOMESTUDENT);
 		  }
 		else {

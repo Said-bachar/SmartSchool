@@ -28,6 +28,14 @@ public class ForumMessageService {
 		return forumMessageDao.getForumMessage(id);
 	}
 	
+	public ForumMessage updateContent(ForumMessage forumMessage, String content) {
+		return forumMessageDao.updateContent(forumMessage, content);
+	}
+	
+	public ForumMessage updateTopic(ForumMessage forumMessage, String topic) {
+		return forumMessageDao.updateTopic(forumMessage, topic);
+	}
+	
 	public ForumMessage delete(ForumMessage forumMessage) {
 		return forumMessageDao.delete(forumMessage);
 	}
