@@ -22,24 +22,31 @@ public class AdminService {
 
 		return this.adminDao.getAdmins();
 	}
-	
-    public Admin getAdmin(String username) {
+public Admin getAdmin(String username) {
 		return this.adminDao.getAdmin(username);
 	}
 
+<<<<<<< HEAD
+	public boolean create(Admin admin) {
+
+		return adminDao.create(admin);
+	}
+
+=======
 	public Admin create(Admin admin) {
 
 		return adminDao.create(admin);
 	}
 	
-	public Admin delete(Admin admin) {
-		return adminDao.delete(admin);
-	}
-    
 	public Admin updateUsername(Admin admin, String username) {
 
 		return adminDao.updateUsername(admin, username);
 	}
+	
+	public Admin delete(Admin admin) {
+		return adminDao.delete(admin);
+	}
+>>>>>>> c10a2a4... Add restTemplate and connection to server
 	
 	public boolean updatePassword(Admin admin, String password) {
 

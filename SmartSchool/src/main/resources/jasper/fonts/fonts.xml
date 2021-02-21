@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+	<fontFamily name="DejaVu Sans">
+		<normal><![CDATA[jasper/fonts/dejavu-sans/ttf/DejaVuSans.ttf]]></normal>
+		<bold><![CDATA[jasper/fonts/dejavu-sans/ttf/DejaVuSans-Bold.ttf]]></bold>
+		<italic><![CDATA[jasper/fonts/dejavu-sans/ttf/DejaVuSans-BoldOblique.ttf]]></italic>
+		<bolditalic><![CDATA[jasper/fonts/dejavu-sans/ttf/DejaVuSans-BoldOblique.ttf]]></bolditalic>
+		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+		<exportFonts/>
+	</fontFamily>
+</fontFamilies>

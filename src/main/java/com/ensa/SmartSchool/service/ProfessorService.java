@@ -22,26 +22,22 @@ public class ProfessorService {
 		return this.professorDao.getProfessors();
 	}
 
-	public Professor getProfessorByFirstName(String firstName) {
-		return this.professorDao.getProfessorByFirstName(firstName);
+	public Professor getProfessor(String firstName,String lastName) {
+		return this.professorDao.getProfessor(firstName,lastName);
 	}
-    
-	public Professor getProfessorByLastName(String lastName) {
-		return this.professorDao.getProfessorByLastName(lastName);
-	}
-	
-	public Professor create(Professor professor) {
+
+	public boolean create(Professor professor) {
 		return professorDao.create(professor);
 	}
-	public Professor updateProfessorFirstName(Professor professor, String firstName) {
+	public boolean updateProfessorFirstName(Professor professor, String firstName) {
 		return professorDao.updateProfessorFirstName(professor,firstName);
 	}
 	
-	public Professor updateProfessorLastName(Professor professor, String lastName) {
+	public boolean updateProfessorLastName(Professor professor, String lastName) {
 		return professorDao.updateProfessorLastName(professor,lastName);
 	}
 	
-	public Professor delete(Professor professor) {
+	public boolean delete(Professor professor) {
 		return professorDao.delete(professor);
 	}
 
