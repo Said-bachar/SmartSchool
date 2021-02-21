@@ -22,6 +22,9 @@ public class LoginAsController {
     @FXML
     private Button btn_admin;
     
+    @FXML
+    private Button btn_professor;
+    
     @Autowired @Lazy
     private StageManager stageManager;
 	
@@ -37,7 +40,10 @@ public class LoginAsController {
 	void close(ActionEvent event) {
 		Platform.exit();
 	} 
-	
+	@FXML
+    void loginProfessor(ActionEvent event) {
+		this.stageManager.switchScene(FxmlView.LOGINPROFESSOR);
+    }
 	@FXML
 	void close1(MouseEvent event) {
 		Platform.exit();

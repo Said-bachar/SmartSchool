@@ -12,6 +12,10 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.web.client.RestTemplate;
 >>>>>>> c10a2a4... Add restTemplate and connection to server
 
+
+import org.springframework.web.client.RestTemplate;
+
+
 import javafx.stage.Stage;
 
 @Configuration

@@ -1,10 +1,14 @@
 package com.ensa.SmartSchool.dao;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
 import com.ensa.SmartSchool.entity.Module;
 import com.ensa.SmartSchool.mappers.ModuleMapper;
@@ -12,38 +16,43 @@ import com.ensa.SmartSchool.mappers.ModuleMapper;
 @Component
 public class ModuleDao {
 	
-JdbcTemplate jdbcTemplate;
-	
+
 	@Autowired
-	public ModuleDao(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate; 
+	private RestTemplate restTemplate;
+		
+		public List<Module> getModules() {
+			
+			String ModuleResourceUrl = "http://localhost:8081/module/getModules";
+			ResponseEntity<Module[]> response = restTemplate.getForEntity(ModuleResourceUrl, Module[].class);
+			Module[] modulesTab=response.getBody();
+			List<Module> modules=Arrays.asList(modulesTab);
+			return modules;
 		}
-	public List<Module> getModules() {
 		
-		return jdbcTemplate.query("select * from module", new ModuleMapper());
-	}
-	
-	public Module getModule(String name) {
+		public Module getModuleByName(String moduleName) {
+			
+			 String ModuleResourceUrl = "http://localhost:8081/module/getModule/moduleName="+moduleName;
+			 HttpEntity<String> request = new HttpEntity<>(moduleName);
+			 return restTemplate.postForObject(ModuleResourceUrl, request, Module.class);	
+		}
 		
-		return jdbcTemplate.queryForObject("select * from module where module_name=? ",new ModuleMapper(),name);	
+		public Module create(Module module) {
+			 String ModuleResourceUrl= "http://localhost:8081/module/create";
+			 HttpEntity<Module> request = new HttpEntity<>(module);
+			 return restTemplate.postForObject(ModuleResourceUrl, request, Module.class);
+		}
+		public Module updateModuleName(Module module,String moduleName) {
+			 String ModuleResourceUrl = "http://localhost:8081/module/update/moduleName="+moduleName;
+			 HttpEntity<Module> request = new HttpEntity<>(module);
+			 return restTemplate.postForObject(ModuleResourceUrl, request, Module.class);
+		}
+		
+		public Module delete(Module module) {
+			String AdminResourceUrl = "http://localhost:8081/module/delete";
+			HttpEntity<Module> request = new HttpEntity<>(module);
+			return restTemplate.postForObject(AdminResourceUrl, request, Module.class);
+		}
+		
 	}
-	
-	public boolean create(Module module) {
-		String sql="INSERT INTO module (module_name,level_name) VALUES (?,?)";
-		jdbcTemplate.update(sql,module.getModuleName(),module.getLevelName());
-		return true;	
-	}
-	public boolean updateModuleName(Module module,String name) {
-		String sql="UPDATE MODULE SET MODULE_NAME=? WHERE MODULE_ID=?";
-		jdbcTemplate.update(sql,name,module.getModuleId());
-		return true;
-	}
-	
-	public boolean delete(Module module) {
-		String sql="DELETE FROM MODULE WHERE MODULE_ID=?";
-		jdbcTemplate.update(sql,module.getModuleId());
-		return true;
-	}
-	
-}
+
 	

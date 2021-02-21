@@ -27,28 +27,46 @@ public Admin getAdmin(String username) {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public boolean create(Admin admin) {
 
 		return adminDao.create(admin);
 	}
 
 =======
+=======
+
+>>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 	public Admin create(Admin admin) {
 
 		return adminDao.create(admin);
 	}
 	
+<<<<<<< HEAD
+=======
+
+	
+	
+public Admin delete(Admin admin) {
+		return adminDao.delete(admin);
+	}
+
+>>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 	public Admin updateUsername(Admin admin, String username) {
 
 		return adminDao.updateUsername(admin, username);
 	}
 	
+<<<<<<< HEAD
 	public Admin delete(Admin admin) {
 		return adminDao.delete(admin);
 	}
 >>>>>>> c10a2a4... Add restTemplate and connection to server
 	
 	public boolean updatePassword(Admin admin, String password) {
+=======
+	public Admin updatePassword(Admin admin, String password) {
+>>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 
 		return adminDao.updatePassword(admin, password);
 	}

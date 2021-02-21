@@ -34,15 +34,15 @@ public class LevelService {
 	public Level getLevel(String name) {
 		return this.levelDao.getLevel(name);
 	}
-	public boolean create(Level level) {
+	public Level create(Level level) {
 		return levelDao.create(level);
 	}
 
-	public boolean updateLevelName(Level level, String name) {
+	public Level updateLevelName(Level level, String name) {
 		return levelDao.updateLevelName(level,name);
 	}
 	
-	public boolean delete(Level level) {
+	public Level delete(Level level) {
 		return levelDao.delete(level);
 	}
 

@@ -38,10 +38,24 @@ public boolean updateProfessorFirstName(Professor professor,String firstName) {
 		jdbcTemplate.update(sql,lastName,professor.getProfessorId());
 		return true;
 	}
+<<<<<<< HEAD
 	public boolean delete(Professor professor) {
 		String sql="DELETE FROM PROFESSOR WHERE PROFESSOR_ID=?";
 		jdbcTemplate.update(sql,professor.getProfessorId());
 		return true;
+=======
+	
+	public Professor updatePassword(Professor professor,String password) {
+	    String ProfessorResourceUrl = "http://localhost:8081/professor/updatePassword/password=" + password;
+	   HttpEntity<Professor> request =new HttpEntity<>(professor);
+	   return restTemplate.postForObject(ProfessorResourceUrl,request,Professor.class);  
+	}
+	
+	public Professor delete(Professor professor) {
+		String ProfessorResourceUrl = "http://localhost:8081/professor/delete";
+		HttpEntity<Professor> request = new HttpEntity<>(professor);
+		return restTemplate.postForObject(ProfessorResourceUrl, request, Professor.class);
+>>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 	}
 	public boolean create(Professor professor) {
 		String sql="INSERT INTO professor (professor_first_name,professor_last_name,level_name) VALUES (?,?,?)";

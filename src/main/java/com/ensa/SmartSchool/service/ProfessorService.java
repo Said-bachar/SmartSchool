@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.ensa.SmartSchool.dao.ProfessorDao;
 import com.ensa.SmartSchool.entity.Professor;
+import com.ensa.SmartSchool.entity.Student;
 
 @Component
 public class ProfessorService {
@@ -37,9 +38,24 @@ public class ProfessorService {
 		return professorDao.updateProfessorLastName(professor,lastName);
 	}
 	
+<<<<<<< HEAD
 	public boolean delete(Professor professor) {
+=======
+	public Professor updatePassword(Professor professor, String password) {
+		return professorDao.updatePassword(professor,password);
+	}
+	
+	public Professor delete(Professor professor) {
+>>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 		return professorDao.delete(professor);
 	}
 
+	public boolean authenticate(String lastName, String password) {
+		Professor professor = professorDao.getProfessorByLastName( lastName);
+		if(professor.equals(null)) {
+			return false;
+		}
+		return professor.getPassword().equals(password) ;
+	}
 
 }
