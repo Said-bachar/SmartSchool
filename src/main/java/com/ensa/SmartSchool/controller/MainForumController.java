@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import com.ensa.SmartSchool.config.StageManager;
 import com.ensa.SmartSchool.entity.ForumMessage;
-
+import com.ensa.SmartSchool.entity.Notice;
 import com.ensa.SmartSchool.service.ForumMessageService;
 import com.ensa.SmartSchool.view.FxmlView;
 
@@ -101,32 +101,44 @@ public class MainForumController implements Initializable{
 	    }
 
 	    @FXML
-	    void goHomeAdmin(MouseEvent event) {
-
+	    void goCourse(MouseEvent event) {
+            this.stageManager.switchScene(FxmlView.COURSESSTUDENT1);
 	    }
 
-	   
+	    @FXML
+	    void goForum(MouseEvent event) {
+	    	  this.stageManager.switchScene(FxmlView.FORUM);
+	    }
 
 	    @FXML
-	    void goMainNotice(MouseEvent event) {
-
+	    void goHome(MouseEvent event) {
+	    	  this.stageManager.switchScene(FxmlView.FORUM);
+	    }
+	    
+	    @FXML
+	    void goNotice(MouseEvent event) {
+	    	  this.stageManager.switchScene(FxmlView.NOTICESTUDENT);
 	    }
 
 	    @FXML
 	    void logout(ActionEvent event) {
-
+	    	  this.stageManager.switchScene(FxmlView.LOGINAS);
 	    }
 
 	   
 	    @FXML
 	    void logout1(MouseEvent event) {
-
+	    	this.stageManager.switchScene(FxmlView.LOGINAS);
 	    }
 
 	   
 	    @FXML
 	    void search(ActionEvent event) {
-	    	System.out.println(search_by_topic.getText());	  
+	    	String title = this.search_by_topic.getText();
+	    	System.out.println(title);
+	    	//ForumMessage forumMessage = this.forumMessageService.getForumMessage(id);
+	    	//forum_message_list.getItems().clear();
+	    	//forum_message_list.getItems().add(forumMessage);	  
 	    	}
 
 	    @FXML

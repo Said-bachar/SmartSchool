@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -10,6 +11,8 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+>>>>>>> 79eace5... Some modifications
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -24,12 +27,16 @@
 <?import javafx.scene.text.Text?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="632.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.NoticeAdminController">
    <children>
       <Line endX="103.0" layoutX="424.0" layoutY="40.0" startX="-374.3999938964844" startY="7.62939453125E-6" stroke="#ff4007" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
       <Button layoutX="439.0" layoutY="354.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #00154f; -fx-background-radius: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text="  Send" textFill="WHITE">
 =======
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="632.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.AddNewMessageController">
+=======
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="632.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.AddNewMessageController">
+>>>>>>> 79eace5... Some modifications
    <children>
       <Line endX="103.0" layoutX="424.0" layoutY="40.0" startX="-374.3999938964844" startY="7.62939453125E-6" stroke="#ff4007" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
       <Button alignment="CENTER" layoutX="438.0" layoutY="354.0" mnemonicParsing="false" onAction="#send" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #00154f; -fx-background-radius: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" styleClass="login-btn" stylesheets="@../css/style.css" text=" Send" textFill="WHITE">
@@ -53,9 +60,9 @@
       </Pane>
       <Pane prefHeight="407.0" prefWidth="49.0" style="-fx-background-color: #00154f;">
          <children>
-            <Pane prefHeight="40.0" prefWidth="49.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(220,225,225,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
+            <Pane onMouseClicked="#goHOME" prefHeight="40.0" prefWidth="49.0" style="-fx-background-color: ff4007; -fx-effect: dropshadow(three-pass-box, rgba(220,225,225,0.8), 10, 0, 0, 0);" styleClass="panes" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="34.0" fitWidth="64.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="34.0" fitWidth="64.0" layoutX="8.0" layoutY="3.0" onMouseClicked="#goHOME" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -65,9 +72,9 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="64.0" onMouseClicked="#goHomeAdmin" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="64.0" onMouseClicked="#goHome" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHomeAdmin" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -77,9 +84,9 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="101.0" onMouseClicked="#goMainNoticeAdmin" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="101.0" onMouseClicked="#goNotice" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" onMouseClicked="#goMainNoticeAdmin" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="5.0" onMouseClicked="#goNotice" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -101,9 +108,9 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="177.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="177.0" onMouseClicked="#goCourse" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="6.0" onMouseClicked="#goCourse" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -125,9 +132,9 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="246.0" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
+            <Pane layoutY="246.0" onMouseClicked="#goForum" prefHeight="40.0" prefWidth="49.0" styleClass="bar-btn" stylesheets="@../css/style.css">
                <children>
-                  <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="13.0" layoutY="10.0" onMouseClicked="#goForum" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>

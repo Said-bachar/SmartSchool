@@ -63,31 +63,40 @@ public class AddNewMessageController {
 	    }
 	    
 	   
+	    @FXML
+	    void goCourse(MouseEvent event) {
+             this.stageManager.switchScene(FxmlView.COURSESSTUDENT1);
+	    }
 
 	    @FXML
-	    void goHomeAdmin(ActionEvent event) {
+	    void goForum(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.FORUM);
 
 	    }
 
-	  
-
 	    @FXML
-	    void goMainNoticeAdmin(ActionEvent event) {
-
+	    void goHOME(MouseEvent event) {
+             this.stageManager.switchScene(FxmlView.LOGINAS);
 	    }
 
-	   
+	    @FXML
+	    void goHome(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.FORUM);
+	    }
+
+	    @FXML
+	    void goNotice(MouseEvent event) {
+	    	this.stageManager.switchScene(FxmlView.NOTICESTUDENT);
+	    }
 
 	    @FXML
 	    void logout(ActionEvent event) {
-
+               this.stageManager.switchScene(FxmlView.LOGINAS);
 	    }
-
-	    
 
 	    @FXML
 	    void logout1(MouseEvent event) {
-
+	    	this.stageManager.switchScene(FxmlView.LOGINAS);
 	    }
 
 	   
