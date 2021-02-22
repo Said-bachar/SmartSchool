@@ -49,21 +49,6 @@ public class HomeProfessorController implements Initializable{
     void logout1(MouseEvent event) {
     	this.stageManager.switchScene(FxmlView.LOGINPROFESSOR);
     }
-    
-    @FXML
-    void goNotice(MouseEvent event) {
-    	this.stageManager.switchScene(FxmlView.NOTICESTUDENT);
-    }
-
-    @FXML
-    void goForum(MouseEvent event) {
-         this.stageManager.switchScene(FxmlView.FORUM);
-    }
-    
-    @FXML
-    void goCourse(MouseEvent event) {
-    	this.stageManager.switchScene(FxmlView.COURSESSTUDENT1);
-    }
 
 }
 

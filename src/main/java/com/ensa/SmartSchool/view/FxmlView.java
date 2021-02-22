@@ -214,6 +214,19 @@ MAINFORUM {
         return "/fxml/mainForum.fxml";
     }
 
+},
+ANSWERTOMESSAGEFORUM {
+	
+    @Override
+	public String getTitle() {
+        return getStringFromResourceBundle("AnswerToMessageForum.title");
+    }
+
+    @Override
+	public String getFxmlFile() {
+        return "/fxml/AnswerToMessageForum.fxml";
+    }
+
 };
     
     public abstract String getTitle();
