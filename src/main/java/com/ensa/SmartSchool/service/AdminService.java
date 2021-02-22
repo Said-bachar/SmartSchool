@@ -22,10 +22,12 @@ public class AdminService {
 
 		return this.adminDao.getAdmins();
 	}
-public Admin getAdmin(String username) {
+	
+    public Admin getAdmin(String username) {
 		return this.adminDao.getAdmin(username);
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	public boolean create(Admin admin) {
@@ -37,11 +39,14 @@ public Admin getAdmin(String username) {
 =======
 
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 	public Admin create(Admin admin) {
 
 		return adminDao.create(admin);
 	}
 	
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -52,17 +57,26 @@ public Admin delete(Admin admin) {
 	}
 
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+	public Admin delete(Admin admin) {
+		return adminDao.delete(admin);
+	}
+    
+>>>>>>> parent of fd1f4fc... some modifications
 	public Admin updateUsername(Admin admin, String username) {
 
 		return adminDao.updateUsername(admin, username);
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public Admin delete(Admin admin) {
 		return adminDao.delete(admin);
 	}
 >>>>>>> c10a2a4... Add restTemplate and connection to server
 	
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 	public boolean updatePassword(Admin admin, String password) {
 =======
 	public Admin updatePassword(Admin admin, String password) {

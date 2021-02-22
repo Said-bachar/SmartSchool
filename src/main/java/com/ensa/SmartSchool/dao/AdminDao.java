@@ -3,6 +3,7 @@ package com.ensa.SmartSchool.dao;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,23 +15,25 @@ import java.util.HashMap;
 =======
 
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+import java.util.Arrays;
+>>>>>>> parent of fd1f4fc... some modifications
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import org.springframework.http.HttpEntity;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
->>>>>>> c10a2a4... Add restTemplate and connection to server
 
 =======
 
@@ -40,24 +43,15 @@ import org.springframework.web.client.RestTemplate;
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 import com.ensa.SmartSchool.entity.Admin;
 
-<<<<<<< HEAD
 @Component
 public class AdminDao {
 
 <<<<<<< HEAD
 JdbcTemplate jdbcTemplate;
 	
-=======
-
-@Component
-public class AdminDao {
-
-
-	@Autowired
-	private RestTemplate restTemplate;
-
-	JdbcTemplate jdbcTemplate;
->>>>>>> c10a2a4... Add restTemplate and connection to server
+    @Autowired
+    private RestTemplate restTemplate;
+    
 	@Autowired
 	public AdminDao(JdbcTemplate jdbcTemplate) {
 		
@@ -67,8 +61,8 @@ public class AdminDao {
 
 	
 	public List<Admin> getAdmins() {
-<<<<<<< HEAD
 			
+<<<<<<< HEAD
 		return jdbcTemplate.query("select * from ADMIN", new AdminMapper());
 	}
 	
@@ -97,6 +91,8 @@ public class AdminDao {
     
     public List<Admin> getAdmins() {
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 		String AdminResourceUrl = "http://localhost:8081/admin/getAdmins";
 		ResponseEntity<Admin[]> response = restTemplate.getForEntity(AdminResourceUrl, Admin[].class);
 		Admin[] adminsTab=response.getBody();
@@ -111,20 +107,27 @@ public class AdminDao {
 		
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 	
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
 	
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 	public Admin create(Admin admin) {
-		 String AdminResourceUrl = "http://localhost:8081/admin/create";
+		String AdminResourceUrl = "http://localhost:8081/admin/create";
 		 HttpEntity<Admin> request = new HttpEntity<>(admin);
 		 return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 		
 
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+		
+>>>>>>> parent of fd1f4fc... some modifications
 	}
 	
 	public Admin updateUsername(Admin admin, String username) {
@@ -132,7 +135,7 @@ public class AdminDao {
 		System.out.println(username);
 		HttpEntity<Admin> request =new HttpEntity<>(admin);
 		return restTemplate.postForObject(AdminResourceUrl,request,Admin.class);
->>>>>>> c10a2a4... Add restTemplate and connection to server
+
 	}
 	
 	public Admin updatePassword(Admin admin, String password) {
@@ -144,6 +147,7 @@ public class AdminDao {
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public boolean delete(Admin admin) {
 		String sql="DELETE FROM ADMIN WHERE Username=?";
 		jdbcTemplate.update(sql,admin.getUsername());
@@ -152,12 +156,17 @@ public class AdminDao {
 =======
 	
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 	public Admin delete(Admin admin) {
 		String AdminResourceUrl = "http://localhost:8081/admin/delete";
 		HttpEntity<Admin> request = new HttpEntity<>(admin);
 		return restTemplate.postForObject(AdminResourceUrl, request, Admin.class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c10a2a4... Add restTemplate and connection to server
+=======
+>>>>>>> parent of fd1f4fc... some modifications
 	}
 	
 =======

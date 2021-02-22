@@ -7,10 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
+<<<<<<< HEAD
 
 import org.springframework.web.client.RestTemplate;
 
 
+=======
+import org.springframework.web.client.RestTemplate;
+>>>>>>> parent of fd1f4fc... some modifications
 
 import javafx.stage.Stage;
 

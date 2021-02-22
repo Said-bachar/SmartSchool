@@ -23,21 +23,26 @@ public class ProfessorService {
 		return this.professorDao.getProfessors();
 	}
 
-	public Professor getProfessor(String firstName,String lastName) {
-		return this.professorDao.getProfessor(firstName,lastName);
+	public Professor getProfessorByFirstName(String firstName) {
+		return this.professorDao.getProfessorByFirstName(firstName);
 	}
-
-	public boolean create(Professor professor) {
+    
+	public Professor getProfessorByLastName(String lastName) {
+		return this.professorDao.getProfessorByLastName(lastName);
+	}
+	
+	public Professor create(Professor professor) {
 		return professorDao.create(professor);
 	}
-	public boolean updateProfessorFirstName(Professor professor, String firstName) {
+	public Professor updateProfessorFirstName(Professor professor, String firstName) {
 		return professorDao.updateProfessorFirstName(professor,firstName);
 	}
 	
-	public boolean updateProfessorLastName(Professor professor, String lastName) {
+	public Professor updateProfessorLastName(Professor professor, String lastName) {
 		return professorDao.updateProfessorLastName(professor,lastName);
 	}
 	
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public boolean delete(Professor professor) {
 =======
@@ -47,6 +52,9 @@ public class ProfessorService {
 	
 	public Professor delete(Professor professor) {
 >>>>>>> 84e10a6e6143963984a8c08ec3f4ad33979a5903
+=======
+	public Professor delete(Professor professor) {
+>>>>>>> parent of fd1f4fc... some modifications
 		return professorDao.delete(professor);
 	}
 
